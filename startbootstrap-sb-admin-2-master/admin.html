@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="BrickMaster Studio & Store - Yönetim ve İçerik Paneli">
+    <meta name="author" content="KOÜ Bilişim Sistemleri Mühendisliği">
+
+    <title>BrickMaster - Yönetim Paneli Simülasyonu</title>
+
+    <!-- FontAwesome & Google Fonts -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- SB Admin 2 Stil Dosyası -->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+    <style>
+        /* LEGO Renklerine Göre Sidebar Başlıkları */
+        .sidebar-heading.heading-home { color: #4e73df !important; font-weight: 800; letter-spacing: 1px; }
+        .sidebar-heading.heading-kurumsal { color: #1cc88a !important; font-weight: 800; letter-spacing: 1px; }
+        .sidebar-heading.heading-urunler { color: #f6c23e !important; font-weight: 800; letter-spacing: 1px; }
+        .sidebar-heading.heading-veriler { color: #e74a3b !important; font-weight: 800; letter-spacing: 1px; }
+
+        /* Aktif Menü Sekmeleri */
+        .nav-item.active-blue .nav-link { color: #4e73df !important; font-weight: bold; background: rgba(78, 115, 223, 0.12); border-left: 4px solid #4e73df; }
+        .nav-item.active-green .nav-link { color: #1cc88a !important; font-weight: bold; background: rgba(28, 200, 138, 0.12); border-left: 4px solid #1cc88a; }
+        .nav-item.active-yellow .nav-link { color: #f6c23e !important; font-weight: bold; background: rgba(246, 194, 62, 0.12); border-left: 4px solid #f6c23e; }
+        .nav-item.active-red .nav-link { color: #e74a3b !important; font-weight: bold; background: rgba(231, 74, 59, 0.12); border-left: 4px solid #e74a3b; }
+
+        .border-brick-red { border-left: .25rem solid #e74a3b !important; }
+        .border-brick-yellow { border-left: .25rem solid #f6c23e !important; }
+        .border-brick-green { border-left: .25rem solid #1cc88a !important; }
+        .border-brick-blue { border-left: .25rem solid #4e73df !important; }
+    </style>
+</head>
+
+<body id="page-top">
+
+    <!-- Sayfa Kapsayıcı -->
+    <div id="wrapper">
+
+        <!-- Kenar Çubuğu (Sidebar) - Koyu Arka Plan Üzerinde Renkli LEGO Kategorileri -->
+        <ul class="navbar-nav bg-gray-900 sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar Marka -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon rotate-n-15 text-danger">
+                    <i class="fas fa-cubes fa-2x"></i>
+                </div>
+                <div class="sidebar-brand-text mx-2 text-white">BrickMaster</div>
+            </a>
+
+            <hr class="sidebar-divider my-0">
+
+            <!-- BÖLÜM 1: ANA SAYFA (MAVİ) -->
+            <div class="sidebar-heading heading-home mt-3">Vitrin & Giriş</div>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="index.html">
+                    <i class="fas fa-fw fa-home text-primary"></i>
+                    <span>Ana Sayfa</span>
+                </a>
+            </li>
+
+            <hr class="sidebar-divider">
+
+            <!-- BÖLÜM 2: KURUMSAL (YEŞİL) -->
+            <div class="sidebar-heading heading-kurumsal">Kurumsal</div>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="about.html">
+                    <i class="fas fa-fw fa-info-circle text-success"></i>
+                    <span>Hakkımızda</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="mission.html">
+                    <i class="fas fa-fw fa-bullseye text-success"></i>
+                    <span>Misyon & Vizyon</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="contact.html">
+                    <i class="fas fa-fw fa-envelope text-success"></i>
+                    <span>İletişim & Eksik Parça</span>
+                </a>
+            </li>
+
+            <hr class="sidebar-divider">
+
+            <!-- BÖLÜM 3: ÜRÜNLERİMİZ & BİRİMLERİMİZ (SARI) -->
+            <div class="sidebar-heading heading-urunler">Koleksiyon & Birimler</div>
+            <li class="nav-item">
+                <a class="nav-link collapsed text-white" href="#" data-toggle="collapse" data-target="#collapseProducts"
+                    aria-expanded="true" aria-controls="collapseProducts">
+                    <i class="fas fa-fw fa-boxes text-warning"></i>
+                    <span>Ürünlerimiz</span>
+                </a>
+                <div id="collapseProducts" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header text-warning font-weight-bold">Set Kategorileri:</h6>
+                        <a class="collapse-item" href="product-details.html">Koleksiyonluk Setler</a>
+                        <a class="collapse-item" href="product-details.html">MOC Özel Tasarımlar</a>
+                        <a class="collapse-item" href="product-details.html">Yedek Parça Paketleri</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed text-white" href="#" data-toggle="collapse" data-target="#collapseUnits"
+                    aria-expanded="true" aria-controls="collapseUnits">
+                    <i class="fas fa-fw fa-sitemap text-warning"></i>
+                    <span>Birimlerimiz</span>
+                </a>
+                <div id="collapseUnits" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header text-warning font-weight-bold">Hizmet Masaları:</h6>
+                        <a class="collapse-item" href="#">Kılavuz Arşivi</a>
+                        <a class="collapse-item" href="contact.html">Kayıp Parça Masası</a>
+                        <a class="collapse-item" href="#">Lojistik & Ayıklama</a>
+                    </div>
+                </div>
+            </li>
+
+            <hr class="sidebar-divider">
+
+            <!-- BÖLÜM 4: VERİLER & YÖNETİM (KIRMIZI) -->
+            <div class="sidebar-heading heading-veriler">Veriler & Yönetim</div>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="charts.html">
+                    <i class="fas fa-fw fa-chart-pie text-danger"></i>
+                    <span>Rakamlarla BrickMaster</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="announcements.html">
+                    <i class="fas fa-fw fa-bullhorn text-danger"></i>
+                    <span>Duyuru Arşivi</span>
+                </a>
+            </li>
+            <!-- Aktif Menü: Yönetim Paneli (Kırmızı Vurgulu) -->
+            <li class="nav-item active-red">
+                <a class="nav-link" href="admin.html">
+                    <i class="fas fa-fw fa-user-shield text-danger"></i>
+                    <span>Yönetim Paneli</span>
+                </a>
+            </li>
+
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+        </ul>
+        <!-- Sidebar Bitiş -->
+
+        <!-- İçerik Kapsayıcısı -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Ana İçerik -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <h5 class="m-0 font-weight-bold text-gray-800 d-none d-sm-inline-block">
+                        <i class="fas fa-tools text-danger mr-2"></i>BrickMaster İçerik ve Katalog Yönetimi (Admin)
+                    </h5>
+
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown no-arrow">
+                            <span class="mr-2 d-none d-lg-inline text-gray-600 small font-weight-bold">
+                                Yetki: Sistem Yöneticisi | KOÜ TBL303
+                            </span>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- Topbar Bitiş -->
+
+                <!-- Sayfa İçi İçerik -->
+                <div class="container-fluid">
+
+                    <!-- Başlık ve Bilgilendirme Kartı -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <div>
+                            <h1 class="h3 mb-0 text-gray-800">Yönetim Paneli Simülasyonu</h1>
+                            <p class="text-muted small mb-0">Sunucu kodlaması olmadan katalog verilerini ve duyuruları yönetebileceğiniz dinamik arayüz.</p>
+                        </div>
+                        <span class="badge badge-danger p-2"><i class="fas fa-database mr-1"></i> Client-Side Modu</span>
+                    </div>
+
+                    <!-- Bildirim Alanı -->
+                    <div id="adminAlert" class="alert alert-success d-none alert-dismissible fade show shadow-sm" role="alert">
+                        <i class="fas fa-check-circle mr-2"></i><strong id="alertTitle">Kayıt Başarılı!</strong> <span id="alertMsg">İçerik başarıyla eklendi.</span>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <!-- 2 SÜTUN: YENİ SET EKLEME & YENİ DUYURU EKLEME -->
+                    <div class="row">
+
+                        <!-- Sol Form: Yeni LEGO / MOC Seti Ekleme -->
+                        <div class="col-lg-6 mb-4">
+                            <div class="card shadow border-brick-red h-100">
+                                <div class="card-header py-3 bg-white d-flex align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-danger"><i class="fas fa-plus-circle mr-2"></i>Kataloğa Yeni Set Ekle</h6>
+                                    <span class="badge badge-danger">Ürün Girişi</span>
+                                </div>
+                                <div class="card-body">
+                                    <form id="addSetForm">
+                                        <div class="form-row">
+                                            <div class="form-group col-md-8">
+                                                <label for="setName" class="font-weight-bold small">Set / MOC Adı <span class="text-danger">*</span></label>
+                                                <input type="text" class="form-control form-control-sm" id="setName" placeholder="Örn: 1:8 Ferrari Daytona SP3" required>
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label for="setCodeInput" class="font-weight-bold small">Set Kodu <span class="text-danger">*</span></label>
+                                                <input type="text" class="form-control form-control-sm" id="setCodeInput" placeholder="Örn: 42143" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div class="form-group col-md-4">
+                                                <label for="setCategory" class="font-weight-bold small">Kategori / Tema</label>
+                                                <select id="setCategory" class="form-control form-control-sm">
+                                                    <option>LEGO Technic</option>
+                                                    <option>MOC Özel Tasarım</option>
+                                                    <option>Star Wars UCS</option>
+                                                    <option>Architecture</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label for="pieceCount" class="font-weight-bold small">Parça Sayısı</label>
+                                                <input type="number" class="form-control form-control-sm" id="pieceCount" placeholder="Örn: 3778" required>
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label for="setPrice" class="font-weight-bold small">Fiyat (TL) <span class="text-danger">*</span></label>
+                                                <input type="text" class="form-control form-control-sm" id="setPrice" placeholder="Örn: 14.500 ₺" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="setDescription" class="font-weight-bold small">Ürün Açıklaması ve Özellikleri</label>
+                                            <textarea class="form-control form-control-sm" id="setDescription" rows="3" placeholder="Setin motor tipi, vites kutusu veya detayları..."></textarea>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label for="setManualFile" class="font-weight-bold small">Montaj Kılavuzu (PDF)</label>
+                                                <input type="file" class="form-control-file small" id="setManualFile" accept=".pdf">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="setImageFile" class="font-weight-bold small">Kutu / Model Görseli</label>
+                                                <input type="file" class="form-control-file small" id="setImageFile" accept="image/*">
+                                            </div>
+                                        </div>
+
+                                        <button type="submit" class="btn btn-danger btn-sm btn-block font-weight-bold shadow-sm">
+                                            <i class="fas fa-save mr-1"></i> Seti Kataloğa Kaydet
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sağ Form: Yeni Duyuru & Dosya Eki Ekleme -->
+                        <div class="col-lg-6 mb-4">
+                            <div class="card shadow border-brick-yellow h-100">
+                                <div class="card-header py-3 bg-white d-flex align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-warning"><i class="fas fa-bullhorn mr-2"></i>Yeni Duyuru & Fırsat Yayınla</h6>
+                                    <span class="badge badge-warning text-dark">Duyuru / Modal</span>
+                                </div>
+                                <div class="card-body">
+                                    <form id="addAnnouncementForm">
+                                        <div class="form-group">
+                                            <label for="annTitle" class="font-weight-bold small">Duyuru / Kampanya Başlığı <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control form-control-sm" id="annTitle" placeholder="Örn: Hafta Sonu Technic İndirim Günleri Başladı!" required>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label for="annCategory" class="font-weight-bold small">Duyuru Türü</label>
+                                                <select id="annCategory" class="form-control form-control-sm">
+                                                    <option>Kampanya & Fırsat</option>
+                                                    <option>Yeni Çıkan Set Bildirimi</option>
+                                                    <option>Atölye & MOC Yarışması</option>
+                                                    <option>Kargo & Teslimat Güncellemesi</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="annExpire" class="font-weight-bold small">Son Geçerlilik Tarihi</label>
+                                                <input type="date" class="form-control form-control-sm" id="annExpire">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="annContent" class="font-weight-bold small">Duyuru Detayı (Modalda Görünecek Metin) <span class="text-danger">*</span></label>
+                                            <textarea class="form-control form-control-sm" id="annContent" rows="3" placeholder="Kampanya şartları veya duyuru içeriği..." required></textarea>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="annAttachment" class="font-weight-bold small">Ek Dosya (PDF, Word veya Kampanya Görseli)</label>
+                                            <input type="file" class="form-control-file small" id="annAttachment">
+                                            <small class="text-muted font-italic">Ders kuralı gereği kullanıcılar açılan modalda bu eki indirebilir.</small>
+                                        </div>
+
+                                        <button type="submit" class="btn btn-warning btn-sm btn-block font-weight-bold shadow-sm text-dark">
+                                            <i class="fas fa-paper-plane mr-1"></i> Duyuruyu Yayınla
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- MEVCUT KAYITLAR TABLOSU SİMÜLASYONU -->
+                    <div class="row">
+                        <div class="col-12 mb-4">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3 d-flex justify-content-between align-items-center">
+                                    <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-list mr-2"></i>Kayıtlı Katalog Öğeleri (Canlı Simülasyon)</h6>
+                                    <small class="text-muted">Formdan eklenen veriler anında bu listeye işlenir.</small>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered table-hover" id="catalogTable" width="100%" cellspacing="0">
+                                            <thead class="thead-light">
+                                                <tr>
+                                                    <th>Kod</th>
+                                                    <th>Set / Başlık</th>
+                                                    <th>Kategori</th>
+                                                    <th>Parça / Detay</th>
+                                                    <th>Fiyat / Tarih</th>
+                                                    <th>İşlemler</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="catalogTableBody">
+                                                <tr>
+                                                    <td><span class="badge badge-secondary">#42115</span></td>
+                                                    <td><strong>Lamborghini Sián FKP 37</strong></td>
+                                                    <td>LEGO Technic</td>
+                                                    <td>3696 Parça</td>
+                                                    <td>15.200 ₺</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-info py-0 px-2" title="Düzenle"><i class="fas fa-edit"></i></button>
+                                                        <button class="btn btn-sm btn-danger py-0 px-2" onclick="$(this).closest('tr').remove();" title="Sil"><i class="fas fa-trash"></i></button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span class="badge badge-secondary">#MOC-104</span></td>
+                                                    <td><strong>Orta Çağ Kalesi & Kuşatma</strong></td>
+                                                    <td>MOC Özel Tasarım</td>
+                                                    <td>5120 Parça</td>
+                                                    <td>18.750 ₺</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-info py-0 px-2" title="Düzenle"><i class="fas fa-edit"></i></button>
+                                                        <button class="btn btn-sm btn-danger py-0 px-2" onclick="$(this).closest('tr').remove();" title="Sil"><i class="fas fa-trash"></i></button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- Ana İçerik Bitiş -->
+
+            <!-- Alt Bilgi (Footer) -->
+            <footer class="sticky-footer bg-white shadow-sm mt-4">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span class="text-gray-700">
+                            <strong>BrickMaster Studio & Store</strong> &copy; 2026 | Kocaeli Üniversitesi Bilişim Sistemleri Mühendisliği TBL303 Web Tasarımı Projesi
+                        </span>
+                    </div>
+                </div>
+            </footer>
+            <!-- Footer Bitiş -->
+
+        </div>
+        <!-- İçerik Kapsayıcısı Bitiş -->
+
+    </div>
+    <!-- Sayfa Kapsayıcı Bitiş -->
+
+    <!-- Yukarı Çık Butonu -->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Gerekli JS Dosyaları -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Sunucusuz Canlı Ekleme Simülasyonu (jQuery) -->
+    <script>
+        $(document).ready(function() {
+            // Set Ekleme Simülasyonu
+            $('#addSetForm').on('submit', function(e) {
+                e.preventDefault();
+                var name = $('#setName').val();
+                var code = $('#setCodeInput').val();
+                var category = $('#setCategory').val();
+                var piece = $('#pieceCount').val() + " Parça";
+                var price = $('#setPrice').val();
+
+                var newRow = `
+                    <tr class="table-success">
+                        <td><span class="badge badge-danger">#${code}</span></td>
+                        <td><strong>${name}</strong></td>
+                        <td>${category}</td>
+                        <td>${piece}</td>
+                        <td>${price}</td>
+                        <td>
+                            <button class="btn btn-sm btn-info py-0 px-2" title="Düzenle"><i class="fas fa-edit"></i></button>
+                            <button class="btn btn-sm btn-danger py-0 px-2" onclick="$(this).closest('tr').remove();" title="Sil"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                `;
+
+                $('#catalogTableBody').prepend(newRow);
+                $('#alertTitle').text('Yeni Set Eklendi!');
+                $('#alertMsg').text(`${name} (#${code}) kataloğa başarıyla tanımlandı.`);
+                $('#adminAlert').removeClass('d-none');
+                this.reset();
+            });
+
+            // Duyuru Ekleme Simülasyonu
+            $('#addAnnouncementForm').on('submit', function(e) {
+                e.preventDefault();
+                var title = $('#annTitle').val();
+                var category = $('#annCategory').val();
+
+                $('#alertTitle').text('Duyuru Yayınlandı!');
+                $('#alertMsg').text(`"${title}" duyurusu modal arşivi için yayına alındı.`);
+                $('#adminAlert').removeClass('d-none');
+                this.reset();
+            });
+        });
+    </script>
+
+</body>
+</html>

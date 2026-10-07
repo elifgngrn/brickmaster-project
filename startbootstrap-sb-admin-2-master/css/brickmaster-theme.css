@@ -1,0 +1,109 @@
+/* =========================================================
+   BrickMaster tema dosyası
+   Kullanım: <body id="page-top" class="theme-corporate">
+   theme-home      -> Anasayfa            (mavi   #0057A6)
+   theme-data      -> Veriler + İletişim  (kırmızı #D01012)
+   theme-corporate -> Kurumsal            (yeşil  #237841)
+   theme-products  -> Ürünlerimiz         (sarı   #F7D117)
+   ========================================================= */
+
+/* ---- Varsayılan (tema sınıfı yoksa mavi) ---- */
+body {
+    --theme-color: #0057A6;
+    --theme-dark: #003F78;
+    --theme-accent: #0057A6;
+    --theme-on-color: #FFFFFF;
+    --theme-on-color-soft: rgba(255, 255, 255, 0.8);
+    --theme-on-color-line: rgba(255, 255, 255, 0.15);
+}
+
+body.theme-home {
+    --theme-color: #0057A6;
+    --theme-dark: #003F78;
+    --theme-accent: #0057A6;
+}
+
+body.theme-data {
+    --theme-color: #D01012;
+    --theme-dark: #8E0B0D;
+    --theme-accent: #D01012;
+}
+
+body.theme-corporate {
+    --theme-color: #237841;
+    --theme-dark: #1A5C31;
+    --theme-accent: #237841;
+}
+
+/* Sarı zemin üzerinde beyaz yazı okunmaz: koyu yazı kullanılır */
+body.theme-products {
+    --theme-color: #F7D117;
+    --theme-dark: #D9B50F;
+    --theme-accent: #8A6D00;
+    --theme-on-color: #1B1B1B;
+    --theme-on-color-soft: rgba(27, 27, 27, 0.8);
+    --theme-on-color-line: rgba(27, 27, 27, 0.2);
+}
+
+/* ---- Sidebar zemini ---- */
+.bg-gradient-primary {
+    background-color: var(--theme-color);
+    background-image: linear-gradient(180deg, var(--theme-color) 10%, var(--theme-dark) 100%);
+    background-size: cover;
+}
+
+/* ---- Sidebar yazıları ---- */
+.sidebar-dark .sidebar-brand,
+.sidebar-dark .sidebar-heading,
+.sidebar-dark .nav-item .nav-link,
+.sidebar-dark .nav-item .nav-link i,
+.sidebar-dark .nav-item .nav-link span {
+    color: var(--theme-on-color-soft);
+}
+
+.sidebar-dark .nav-item.active .nav-link,
+.sidebar-dark .nav-item.active .nav-link i,
+.sidebar-dark .nav-item .nav-link:hover,
+.sidebar-dark .nav-item .nav-link:hover i,
+.sidebar-dark .sidebar-brand:hover {
+    color: var(--theme-on-color);
+}
+
+.sidebar-dark hr.sidebar-divider {
+    border-top: 1px solid var(--theme-on-color-line);
+}
+
+.sidebar-dark #sidebarToggle {
+    background-color: var(--theme-on-color-line);
+}
+
+.sidebar-dark #sidebarToggle::after {
+    color: var(--theme-on-color-soft);
+}
+
+/* ---- Sayfa içi vurgu renkleri ---- */
+.text-primary {
+    color: var(--theme-accent) !important;
+}
+
+.btn-primary {
+    background-color: var(--theme-color);
+    border-color: var(--theme-color);
+    color: var(--theme-on-color);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--theme-dark);
+    border-color: var(--theme-dark);
+    color: var(--theme-on-color);
+}
+
+a {
+    color: var(--theme-accent);
+}
+
+.collapse-inner .collapse-item.active,
+.collapse-inner .collapse-item:hover {
+    color: var(--theme-accent);
+}
