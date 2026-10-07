@@ -5,207 +5,275 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="BrickMaster Studio & Store - İletişim ve Kayıp Parça Masası">
+    <meta name="description" content="BrickMaster Studio & Store - İletişim ve Harita">
     <meta name="author" content="KOÜ Bilişim Sistemleri Mühendisliği">
 
-    <title>BrickMaster - İletişim & Kayıp Parça Masası</title>
+    <title>BrickMaster - İletişim & Harita</title>
 
-    <!-- SB Admin 2 Font & Icon Setleri -->
+    <!-- FontAwesome & Google Fonts -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900" rel="stylesheet">
 
-    <!-- SB Admin 2 Ana Stil Dosyası -->
+    <!-- SB Admin 2 Orijinal CSS -->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
     <style>
-        .map-responsive {
-            overflow: hidden;
-            padding-bottom: 56.25%;
+        /* 1. SABİT ANTRASİT MENÜ BARI */
+        #accordionSidebar {
+            background-color: #2f323e !important;
+            background-image: none !important;
+        }
+
+        /* 2. KATEGORİ BAŞLIKLARI (SB-ADMIN MAVİSİNİ KESİN EZEN RENKLER) */
+        #accordionSidebar .sidebar-heading.h-blue { color: #4e88ff !important; font-weight: 800 !important; font-size: 0.72rem !important; letter-spacing: 0.8px; }
+        #accordionSidebar .sidebar-heading.h-green { color: #2ecc71 !important; font-weight: 800 !important; font-size: 0.72rem !important; letter-spacing: 0.8px; }
+        #accordionSidebar .sidebar-heading.h-yellow { color: #f1b935 !important; font-weight: 800 !important; font-size: 0.72rem !important; letter-spacing: 0.8px; }
+        #accordionSidebar .sidebar-heading.h-red { color: #e74a3b !important; font-weight: 800 !important; font-size: 0.72rem !important; letter-spacing: 0.8px; }
+
+        /* 3. KATEGORİ İKONLARI */
+        #accordionSidebar .i-blue { color: #4e88ff !important; }
+        #accordionSidebar .i-green { color: #2ecc71 !important; }
+        #accordionSidebar .i-yellow { color: #f1b935 !important; }
+        #accordionSidebar .i-red { color: #e74a3b !important; }
+
+        /* 4. MENÜ LİNKLERİ */
+        #accordionSidebar .nav-item .nav-link {
+            color: #d1d5db !important;
+            font-size: 0.92rem;
+            padding: 0.75rem 1rem;
+        }
+        #accordionSidebar .nav-item .nav-link:hover {
+            color: #ffffff !important;
+            background-color: rgba(255, 255, 255, 0.05) !important;
+        }
+
+        /* 5. AÇILIR MENÜ (COLLAPSE) İÇLİK */
+        #accordionSidebar .collapse-inner {
+            background-color: #242631 !important;
+            border: 1px solid #3c4052 !important;
+        }
+        #accordionSidebar .collapse-item {
+            color: #d1d5db !important;
+            font-size: 0.85rem !important;
+        }
+        #accordionSidebar .collapse-item:hover {
+            color: #f1b935 !important;
+            background-color: rgba(241, 185, 53, 0.1) !important;
+        }
+
+        /* ==============================================================
+           BU SAYFA "KURUMSAL" KATEGORİSİ OLDUĞU İÇİN (YEŞİL TEMA):
+           ============================================================== */
+        .brand-text-green {
+            color: #2ecc71 !important;
+            font-weight: 900 !important;
+            letter-spacing: 1.5px;
+            font-size: 1.15rem;
+        }
+        .brand-icon-green {
+            color: #2ecc71 !important;
+        }
+        #accordionSidebar .nav-item.active-green .nav-link {
+            color: #ffffff !important;
+            font-weight: bold !important;
+            background-color: rgba(46, 204, 113, 0.18) !important;
+            border-left: 4px solid #2ecc71 !important;
+        }
+
+        /* Sayfa İçi Yeşil Vurgular */
+        .text-brick-green { color: #2ecc71 !important; }
+        .bg-brick-green { background-color: #2ecc71 !important; color: #fff !important; }
+        .border-left-brick-green { border-left: .25rem solid #2ecc71 !important; }
+        .border-left-brick-yellow { border-left: .25rem solid #f1b935 !important; }
+        .border-left-brick-blue { border-left: .25rem solid #4e88ff !important; }
+
+        /* Responsive Google Harita Kutusu */
+        .map-container {
             position: relative;
+            padding-bottom: 85%;
             height: 0;
+            overflow: hidden;
             border-radius: 0.35rem;
         }
-        .map-responsive iframe {
-            left: 0;
-            top: 0;
-            height: 100%;
-            width: 100%;
+        .map-container iframe {
             position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             border: 0;
         }
-        .border-brick-red { border-left: .25rem solid #e74a3b !important; }
-        .border-brick-yellow { border-left: .25rem solid #f6c23e !important; }
     </style>
 </head>
 
 <body id="page-top">
 
-    <!-- Sayfa Kapsayıcı -->
     <div id="wrapper">
 
-        <!-- Kenar Çubuğu (Sidebar) -->
-        <ul class="navbar-nav" style="background-color: #2f323e !important;" id="accordionSidebar">
+        <!-- SIDEBAR (charts.html İLE BİREBİR AYNI ANTRASİT YAPI) -->
+        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
 
-            <!-- Sidebar Marka / Logo -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-cubes"></i>
+            <!-- Logo (Kurumsal Sayfalar İçin Yeşil) -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center my-2" href="index.html">
+                <div class="sidebar-brand-icon rotate-n-15 mr-2">
+                    <i class="fas fa-cubes fa-2x brand-icon-green"></i>
                 </div>
-                <div class="sidebar-brand-text mx-2">BrickMaster</div>
+                <div class="sidebar-brand-text brand-text-green">BRICKMASTER</div>
             </a>
 
-            <hr class="sidebar-divider my-0">
+            <hr class="sidebar-divider my-1 border-secondary">
 
-            <!-- Menü: Ana Sayfa -->
+            <!-- 1. VİTRİN & GİRİŞ (MAVİ) -->
+            <div class="sidebar-heading h-blue mt-3">VİTRİN & GİRİŞ</div>
             <li class="nav-item">
                 <a class="nav-link" href="index.html">
-                    <i class="fas fa-fw fa-home"></i>
+                    <i class="fas fa-fw fa-home i-blue"></i>
                     <span>Ana Sayfa</span>
                 </a>
             </li>
 
-            <hr class="sidebar-divider">
+            <hr class="sidebar-divider my-2 border-secondary">
 
-            <div class="sidebar-heading">Kurumsal</div>
-
+            <!-- 2. KURUMSAL (YEŞİL) -->
+            <div class="sidebar-heading h-green">KURUMSAL</div>
             <li class="nav-item">
                 <a class="nav-link" href="about.html">
-                    <i class="fas fa-fw fa-info-circle"></i>
+                    <i class="fas fa-fw fa-info-circle i-green"></i>
                     <span>Hakkımızda</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="mission.html">
-                    <i class="fas fa-fw fa-bullseye"></i>
+                    <i class="fas fa-fw fa-bullseye i-green"></i>
                     <span>Misyon & Vizyon</span>
                 </a>
             </li>
-            <!-- Aktif Menü: İletişim -->
-            <li class="nav-item active">
+            <!-- Aktif Sekme: İletişim & Harita (Yeşil) -->
+            <li class="nav-item active-green">
                 <a class="nav-link" href="contact.html">
-                    <i class="fas fa-fw fa-envelope"></i>
-                    <span>İletişim & Eksik Parça</span>
+                    <i class="fas fa-fw fa-envelope i-green"></i>
+                    <span>İletişim & Harita</span>
                 </a>
             </li>
 
-            <hr class="sidebar-divider">
+            <hr class="sidebar-divider my-2 border-secondary">
 
-            <div class="sidebar-heading">Koleksiyon & Birimler</div>
-
-            <!-- Açılır Menü: Ürünlerimiz -->
+            <!-- 3. KOLEKSİYON & BİRİMLER (SARI) -->
+            <div class="sidebar-heading h-yellow">KOLEKSİYON & BİRİMLER</div>
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProducts"
-                    aria-expanded="true" aria-controls="collapseProducts">
-                    <i class="fas fa-fw fa-boxes"></i>
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProducts">
+                    <i class="fas fa-fw fa-boxes i-yellow"></i>
                     <span>Ürünlerimiz</span>
                 </a>
-                <div id="collapseProducts" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Set Türleri:</h6>
+                <div id="collapseProducts" class="collapse" data-parent="#accordionSidebar">
+                    <div class="py-2 collapse-inner rounded">
+                        <h6 class="collapse-header text-warning font-weight-bold">Set Çeşitleri:</h6>
                         <a class="collapse-item" href="product-details.html">Koleksiyonluk Setler</a>
                         <a class="collapse-item" href="product-details.html">MOC Özel Tasarımlar</a>
-                        <a class="collapse-item" href="product-details.html">Yedek Parça Paketleri</a>
+                        <a class="collapse-item" href="product-details.html">Yedek Parçalar</a>
                     </div>
                 </div>
             </li>
-
-            <!-- Açılır Menü: Birimlerimiz -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUnits"
-                    aria-expanded="true" aria-controls="collapseUnits">
-                    <i class="fas fa-fw fa-sitemap"></i>
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUnits">
+                    <i class="fas fa-fw fa-sitemap i-yellow"></i>
                     <span>Birimlerimiz</span>
                 </a>
-                <div id="collapseUnits" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Hizmet Alanları:</h6>
+                <div id="collapseUnits" class="collapse" data-parent="#accordionSidebar">
+                    <div class="py-2 collapse-inner rounded">
+                        <h6 class="collapse-header text-warning font-weight-bold">Birim Masaları:</h6>
                         <a class="collapse-item" href="#">Kılavuz Arşivi</a>
-                        <a class="collapse-item" href="contact.html">Kayıp Parça Masası</a>
                         <a class="collapse-item" href="#">Lojistik & Ayıklama</a>
                     </div>
                 </div>
             </li>
+            <!-- AYRI EKSİK PARÇA MASASI SEKMESİ -->
+            <li class="nav-item">
+                <a class="nav-link" href="missing-part.html">
+                    <i class="fas fa-fw fa-puzzle-piece i-yellow"></i>
+                    <span>Eksik Parça Masası</span>
+                </a>
+            </li>
 
-            <hr class="sidebar-divider">
+            <hr class="sidebar-divider my-2 border-secondary">
 
-            <div class="sidebar-heading">Veriler & Yönetim</div>
-
+            <!-- 4. VERİLER & YÖNETİM (KIRMIZI) -->
+            <div class="sidebar-heading h-red">VERİLER & YÖNETİM</div>
             <li class="nav-item">
                 <a class="nav-link" href="charts.html">
-                    <i class="fas fa-fw fa-chart-pie"></i>
+                    <i class="fas fa-fw fa-chart-pie i-red"></i>
                     <span>Rakamlarla BrickMaster</span>
                 </a>
             </li>
-
             <li class="nav-item">
                 <a class="nav-link" href="announcements.html">
-                    <i class="fas fa-fw fa-bullhorn"></i>
+                    <i class="fas fa-fw fa-bullhorn i-red"></i>
                     <span>Duyuru Arşivi</span>
                 </a>
             </li>
-
             <li class="nav-item">
                 <a class="nav-link" href="admin.html">
-                    <i class="fas fa-fw fa-user-shield"></i>
+                    <i class="fas fa-fw fa-user-shield i-red"></i>
                     <span>Yönetim Paneli</span>
                 </a>
             </li>
 
-            <hr class="sidebar-divider d-none d-md-block">
+            <hr class="sidebar-divider d-none d-md-block my-3 border-secondary">
 
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
-
         </ul>
-        <!-- Sidebar Bitiş -->
+        <!-- SIDEBAR BİTİŞ -->
 
-        <!-- İçerik Kapsayıcısı -->
-        <div id="content-wrapper" class="d-flex flex-column">
+        <!-- İÇERİK ALANI -->
+        <div id="content-wrapper" class="d-flex flex-column bg-light">
 
-            <!-- Ana İçerik -->
             <div id="content">
 
-                <!-- Üst Çubuk (Topbar) -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                <!-- TOPBAR -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow-sm">
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3 text-success">
                         <i class="fa fa-bars"></i>
                     </button>
 
                     <h5 class="m-0 font-weight-bold text-gray-800 d-none d-sm-inline-block">
-                        BrickMaster Destek & İletişim Merkezi
+                        <i class="fas fa-headset text-brick-green mr-2"></i>BrickMaster İletişim Masası
                     </h5>
 
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item dropdown no-arrow">
-                            <span class="mr-2 d-none d-lg-inline text-gray-600 small font-weight-bold">
+                        <li class="nav-item">
+                            <span class="text-gray-600 small font-weight-bold">
                                 KOÜ Bilişim Sistemleri Müh. | TBL303
                             </span>
                         </li>
                     </ul>
                 </nav>
-                <!-- Topbar Bitiş -->
 
-                <!-- Sayfa İçi İçerik Başlangıcı -->
+                <!-- SAYFA İÇERİĞİ -->
                 <div class="container-fluid">
 
-                    <!-- Sayfa Başlığı -->
+                    <!-- Başlık & Vitrin Butonu -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <div>
-                            <h1 class="h3 mb-0 text-gray-800">İletişim & Kayıp Parça Masası</h1>
-                            <p class="text-muted small mb-0">Eksik çıkan tuğlalarınız, teknik destek talepleriniz veya önerileriniz için doğrudan form doldurabilirsiniz.</p>
+                            <h1 class="h3 mb-0 text-gray-800 font-weight-bold">İletişim & Harita</h1>
+                            <p class="text-muted small mb-0">Atölye konumumuz, iletişim kanallarımız ve müşteri öneri/şikayet formu.</p>
                         </div>
+                        <a href="index.html" class="btn btn-sm btn-success shadow-sm font-weight-bold">
+                            <i class="fas fa-arrow-left fa-sm mr-1"></i> Vitrine Geri Dön
+                        </a>
                     </div>
 
-                    <!-- İletişim Bilgi Kartları -->
+                    <!-- İLETİŞİM BİLGİ KARTLARI (3'lü Kart Dizisi) -->
                     <div class="row mb-4">
                         <div class="col-md-4 mb-3">
-                            <div class="card border-brick-red shadow h-100 py-2">
+                            <div class="card border-left-brick-green shadow-sm h-100 py-2">
                                 <div class="card-body">
                                     <div class="d-flex align-items-center">
-                                        <div class="mr-3"><i class="fas fa-map-marker-alt fa-2x text-danger"></i></div>
+                                        <div class="mr-3"><i class="fas fa-map-marker-alt fa-2x text-brick-green"></i></div>
                                         <div>
-                                            <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Stüdyo & Depo</div>
+                                            <div class="text-xs font-weight-bold text-brick-green text-uppercase mb-1">Stüdyo & Depo</div>
                                             <div class="small font-weight-bold text-gray-800">KOÜ Umuttepe Yerleşkesi, Bilişim Ar-Ge Binası No: 4, İzmit / Kocaeli</div>
                                         </div>
                                     </div>
@@ -214,7 +282,7 @@
                         </div>
 
                         <div class="col-md-4 mb-3">
-                            <div class="card border-brick-yellow shadow h-100 py-2">
+                            <div class="card border-left-brick-yellow shadow-sm h-100 py-2">
                                 <div class="card-body">
                                     <div class="d-flex align-items-center">
                                         <div class="mr-3"><i class="fas fa-phone-alt fa-2x text-warning"></i></div>
@@ -229,7 +297,7 @@
                         </div>
 
                         <div class="col-md-4 mb-3">
-                            <div class="card border-left-primary shadow h-100 py-2">
+                            <div class="card border-left-brick-blue shadow-sm h-100 py-2">
                                 <div class="card-body">
                                     <div class="d-flex align-items-center">
                                         <div class="mr-3"><i class="fas fa-envelope-open-text fa-2x text-primary"></i></div>
@@ -244,94 +312,81 @@
                         </div>
                     </div>
 
-                    <!-- Ana İletişim Alanı: Form & Harita -->
+                    <!-- FORM VE GOOGLE HARİTA -->
                     <div class="row">
-
-                        <!-- Sol Sütun: Kayıp Parça & Talep Formu -->
+                        <!-- Sol Kolon: Genel İletişim / Şikayet / Öneri Formu -->
                         <div class="col-lg-7 mb-4">
-                            <div class="card shadow">
-                                <div class="card-header py-3 bg-danger text-white">
-                                    <h6 class="m-0 font-weight-bold"><i class="fas fa-puzzle-piece mr-2"></i>Kayıp Parça & Müşteri Talep Formu</h6>
+                            <div class="card shadow-sm border-left-brick-green">
+                                <div class="card-header py-3 bg-white">
+                                    <h6 class="m-0 font-weight-bold text-brick-green">
+                                        <i class="fas fa-paper-plane mr-2"></i>Müşteri Temsilcisine Mesaj Gönder
+                                    </h6>
                                 </div>
                                 <div class="card-body">
-                                    <!-- Başarı Bildirimi (JS ile tetiklenir) -->
-                                    <div id="formSuccessAlert" class="alert alert-success d-none alert-dismissible fade show" role="alert">
-                                        <i class="fas fa-check-circle mr-2"></i><strong>Talebiniz Alındı!</strong> Bildiriminiz müşteri destek ekibimize iletilmiştir. Kargo takip bilgisi e-postanıza gönderilecektir.
-                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
+                                    <!-- Başarı Bildirimi (JS ile Açılır) -->
+                                    <div id="contactSuccessAlert" class="alert alert-success d-none alert-dismissible fade show" role="alert">
+                                        <i class="fas fa-check-circle mr-2"></i><strong>Mesajınız Alındı!</strong> İletiniz müşteri temsilcimize e-posta olarak iletilmiştir. En kısa sürede geri dönüş yapılacaktır.
+                                        <button type="button" class="close" data-dismiss="alert"><span>&times;</span></button>
                                     </div>
 
                                     <form id="contactForm">
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
-                                                <label for="fullName" class="font-weight-bold text-gray-800">Ad Soyad <span class="text-danger">*</span></label>
-                                                <input type="text" class="form-control" id="fullName" placeholder="Örn: Ahmet Yılmaz" required>
+                                                <label for="cName" class="small font-weight-bold text-gray-800">Ad Soyad <span class="text-danger">*</span></label>
+                                                <input type="text" class="form-control form-control-sm" id="cName" placeholder="Adınız Soyadınız" required>
                                             </div>
                                             <div class="form-group col-md-6">
-                                                <label for="email" class="font-weight-bold text-gray-800">E-Posta Adresi <span class="text-danger">*</span></label>
-                                                <input type="email" class="form-control" id="email" placeholder="adiniz@alanadi.com" required>
+                                                <label for="cEmail" class="small font-weight-bold text-gray-800">E-Posta Adresi <span class="text-danger">*</span></label>
+                                                <input type="email" class="form-control form-control-sm" id="cEmail" placeholder="adiniz@alanadi.com" required>
                                             </div>
                                         </div>
 
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
-                                                <label for="requestType" class="font-weight-bold text-gray-800">Talep Türü</label>
-                                                <select id="requestType" class="form-control">
-                                                    <option value="missing">Eksik/Kırık Parça Talebi (Ücretsiz)</option>
-                                                    <option value="suggestion">Öneri & Görüş</option>
-                                                    <option value="complaint">Şikayet</option>
-                                                    <option value="custom_moc">Özel MOC Sipariş Talebi</option>
+                                                <label for="cSubject" class="small font-weight-bold text-gray-800">Konu / Bildirim Türü</label>
+                                                <select id="cSubject" class="form-control form-control-sm">
+                                                    <option>Genel Bilgi Talebi</option>
+                                                    <option>Sipariş ve Kargo Takibi</option>
+                                                    <option>Öneri ve Geri Bildirim</option>
+                                                    <option>Müşteri Şikayeti</option>
+                                                    <option>Özel MOC Atölye Talebi</option>
                                                 </select>
                                             </div>
                                             <div class="form-group col-md-6">
-                                                <label for="phone" class="font-weight-bold text-gray-800">Telefon Numarası</label>
-                                                <input type="tel" class="form-control" id="phone" placeholder="05XX XXX XX XX">
-                                            </div>
-                                        </div>
-
-                                        <div class="form-row bg-light p-3 rounded mb-3 border">
-                                            <div class="col-12 mb-2">
-                                                <small class="text-danger font-weight-bold"><i class="fas fa-info-circle mr-1"></i>Eksik Parça Detayları (Kılavuzun son sayfasındaki kodlar)</small>
-                                            </div>
-                                            <div class="form-group col-md-6 mb-md-0">
-                                                <label for="setCode" class="small font-weight-bold">Set Numarası</label>
-                                                <input type="text" class="form-control form-control-sm" id="setCode" placeholder="Örn: 42115 veya MOC-8821">
-                                            </div>
-                                            <div class="form-group col-md-6 mb-0">
-                                                <label for="elementId" class="small font-weight-bold">Parça / Element ID</label>
-                                                <input type="text" class="form-control form-control-sm" id="elementId" placeholder="Örn: 6271165 (Torba No: 3)">
+                                                <label for="cPhone" class="small font-weight-bold text-gray-800">Telefon Numarası</label>
+                                                <input type="tel" class="form-control form-control-sm" id="cPhone" placeholder="05XX XXX XX XX">
                                             </div>
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="message" class="font-weight-bold text-gray-800">Mesajınız & Açıklama <span class="text-danger">*</span></label>
-                                            <textarea class="form-control" id="message" rows="4" placeholder="Talebinizi, teslimat adresinizi veya önerinizi detaylı olarak yazınız..." required></textarea>
+                                            <label for="cMessage" class="small font-weight-bold text-gray-800">Mesajınız <span class="text-danger">*</span></label>
+                                            <textarea class="form-control form-control-sm" id="cMessage" rows="5" placeholder="Görüş, öneri veya talebinizi detaylı olarak açıklayınız..." required></textarea>
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="partPhoto" class="font-weight-bold text-gray-800">Varsa Fotoğraf / Dosya Eki (Opsiyonel)</label>
-                                            <input type="file" class="form-control-file" id="partPhoto">
-                                            <small class="form-text text-muted">Kılavuz sayfasını veya hasarlı parçanın görselini ekleyebilirsiniz.</small>
+                                            <label for="cAttachment" class="small font-weight-bold text-gray-800">Varsa Ek Belge / Görsel</label>
+                                            <input type="file" class="form-control-file small" id="cAttachment">
                                         </div>
 
-                                        <button type="submit" class="btn btn-danger btn-block shadow-sm font-weight-bold py-2">
-                                            <i class="fas fa-paper-plane mr-2"></i>Talebi Müşteri Temsilcisine Gönder
+                                        <button type="submit" class="btn btn-success btn-block font-weight-bold shadow-sm py-2">
+                                            <i class="fas fa-envelope mr-2"></i>Mesajı Müşteri Temsilcisine İlet
                                         </button>
                                     </form>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Sağ Sütun: Harita ve Lokasyon Bilgisi -->
+                        <!-- Sağ Kolon: Google Haritalar & Atölye Bilgisi -->
                         <div class="col-lg-5 mb-4">
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-danger"><i class="fas fa-map-marked-alt mr-2"></i>Stüdyo Konumumuz</h6>
+                            <div class="card shadow-sm mb-4">
+                                <div class="card-header py-3 bg-white">
+                                    <h6 class="m-0 font-weight-bold text-brick-green">
+                                        <i class="fas fa-map-marked-alt mr-2"></i>Atölye & Stüdyo Konumumuz
+                                    </h6>
                                 </div>
                                 <div class="card-body p-2">
-                                    <!-- Google Maps Responsive Iframe (KOÜ Umuttepe Yerleşkesi) -->
-                                    <div class="map-responsive">
+                                    <div class="map-container">
+                                        <!-- Google Haritalar KOÜ Umuttepe Yerleşkesi -->
                                         <iframe 
                                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3020.250550186932!2d29.919427315407065!3d40.82245397931982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cb4ff4e6eb293b%3A0x8eb2a6886e42b260!2sKocaeli%20%C3%9Cniversitesi%20Umuttepe%20Yerle%C5%9Fkesi!5e0!3m2!1str!2str!4v1680000000000!5m2!1str!2str" 
                                             allowfullscreen="" 
@@ -341,72 +396,61 @@
                                     </div>
                                 </div>
                                 <div class="card-footer bg-white small text-muted">
-                                    <i class="fas fa-car mr-1"></i> <strong>Ulaşım Bilgisi:</strong> Umuttepe Kampüsü içerisindeki Bilişim Sistemleri Mühendisliği binası zemin katında yer alan BrickMaster Atölyesi'ni ziyaret edebilirsiniz.
+                                    <i class="fas fa-car mr-1"></i> KOÜ Umuttepe Kampüsü Bilişim Sistemleri Mühendisliği Laboratuvar Bloğu
                                 </div>
                             </div>
 
-                            <!-- Orijinal Parça Garantisi Kutusu -->
-                            <div class="card shadow bg-light border-left-info">
-                                <div class="card-body">
-                                    <h6 class="font-weight-bold text-info"><i class="fas fa-shield-alt mr-1"></i> %100 Orijinal Parça Garantisi</h6>
-                                    <p class="small text-gray-700 mb-0">
-                                        BrickMaster üzerinden temin ettiğiniz tüm setlerde fabrikasyon eksik veya hatalı basım çıkan tuğlalar, form talebiniz onaylandıktan sonra <strong>3 iş günü içerisinde ücretsiz kargo</strong> ile adresinize gönderilir.
-                                    </p>
+                            <!-- Bilgi Notu -->
+                            <div class="card shadow-sm border-left-brick-yellow bg-white">
+                                <div class="card-body small text-gray-700">
+                                    <h6 class="font-weight-bold text-warning mb-1">
+                                        <i class="fas fa-puzzle-piece mr-1"></i> Eksik Parça Bildirimi mi Yapacaksınız?
+                                    </h6>
+                                    <p class="mb-2">Kutunuzdan eksik veya hasarlı tuğla çıktıysa lütfen teknik kodları girebileceğiniz özel masamızı kullanın:</p>
+                                    <a href="missing-part.html" class="btn btn-sm btn-warning text-dark font-weight-bold">
+                                        <i class="fas fa-arrow-right mr-1"></i> Eksik Parça Masasına Git
+                                    </a>
                                 </div>
                             </div>
                         </div>
-
                     </div>
 
                 </div>
-                <!-- /.container-fluid -->
-
             </div>
-            <!-- Ana İçerik Bitiş -->
 
-            <!-- Alt Bilgi (Footer) -->
+            <!-- Footer -->
             <footer class="sticky-footer bg-white shadow-sm mt-4">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span class="text-gray-700">
-                            <strong>BrickMaster Studio & Store</strong> &copy; 2026 | Kocaeli Üniversitesi Bilişim Sistemleri Mühendisliği TBL303 Web Tasarımı Projesi
+                        <span class="text-gray-700 font-weight-bold">
+                            BrickMaster Studio & Store &copy; 2026 | Kocaeli Üniversitesi Bilişim Sistemleri Mühendisliği TBL303
                         </span>
                     </div>
                 </div>
             </footer>
-            <!-- Footer Bitiş -->
 
         </div>
-        <!-- İçerik Kapsayıcısı Bitiş -->
-
     </div>
-    <!-- Sayfa Kapsayıcı Bitiş -->
 
-    <!-- Yukarı Çık Butonu -->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
-
-    <!-- Gerekli JS Dosyaları (SB Admin 2) -->
+    <!-- JS Kütüphaneleri -->
     <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
     <script src="js/sb-admin-2.min.js"></script>
 
-    <!-- Form Simülasyon Scripti -->
+    <!-- Form Gönderim Simülasyonu -->
     <script>
         $(document).ready(function() {
             $('#contactForm').on('submit', function(e) {
                 e.preventDefault();
-                // Sunucu olmadan başarılı gönderim simülasyonu
-                $('#formSuccessAlert').removeClass('d-none');
+                $('#contactSuccessAlert').removeClass('d-none');
                 this.reset();
                 $('html, body').animate({
-                    scrollTop: $("#formSuccessAlert").offset().top - 100
-                }, 500);
+                    scrollTop: $("#contactSuccessAlert").offset().top - 80
+                }, 400);
             });
         });
     </script>
-
 </body>
 </html>
