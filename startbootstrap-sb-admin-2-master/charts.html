@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="BrickMaster Studio & Store - Rakamlarla BrickMaster İstatistikleri">
+    <meta name="description" content="BrickMaster Studio & Store - Rakamlarla BrickMaster">
     <meta name="author" content="KOÜ Bilişim Sistemleri Mühendisliği">
 
     <title>BrickMaster - Rakamlarla İstatistikler</title>
@@ -37,7 +37,7 @@
         #accordionSidebar .i-yellow { color: #f1b935 !important; }
         #accordionSidebar .i-red { color: #e74a3b !important; }
 
-        /* 4. MENÜ LİNKLERİ */
+        /* 4. MENÜ LİNKLERİ (STANDART METİN) */
         #accordionSidebar .nav-item .nav-link {
             color: #d1d5db !important;
             font-size: 0.92rem;
@@ -48,21 +48,36 @@
             background-color: rgba(255, 255, 255, 0.05) !important;
         }
 
-        /* 5. AÇILIR MENÜ (COLLAPSE) İÇLİK */
+        /* 5. "ÜRÜNLERİMİZ" & "BİRİMLERİMİZ" MAVİYE DÖNME ENGELLEYİCİ */
+        #accordionSidebar .nav-item .nav-link[data-toggle="collapse"]:not(.collapsed),
+        #accordionSidebar .nav-item .nav-link[data-toggle="collapse"]:hover,
+        #accordionSidebar .nav-item .nav-link[data-toggle="collapse"]:focus {
+            color: #f1b935 !important;
+            background-color: rgba(241, 185, 53, 0.12) !important;
+        }
+
+        #accordionSidebar .nav-item .nav-link[data-toggle="collapse"]::after {
+            color: #f1b935 !important;
+        }
+
         #accordionSidebar .collapse-inner {
             background-color: #242631 !important;
             border: 1px solid #3c4052 !important;
         }
+
         #accordionSidebar .collapse-item {
             color: #d1d5db !important;
             font-size: 0.85rem !important;
         }
-        #accordionSidebar .collapse-item:hover {
+
+        #accordionSidebar .collapse-item:hover,
+        #accordionSidebar .collapse-item.active {
             color: #f1b935 !important;
-            background-color: rgba(241, 185, 53, 0.1) !important;
+            background-color: rgba(241, 185, 53, 0.15) !important;
+            font-weight: bold !important;
         }
 
-        /* 6. VERİLER & YÖNETİM SAYFASI OLDUĞU İÇİN KIRMIZI TEMA VURGULARI */
+        /* 6. VERİLER & YÖNETİM SAYFASI OLDUĞU İÇİN KIRMIZI TEMA */
         .brand-text-red {
             color: #e74a3b !important;
             font-weight: 900 !important;
@@ -88,7 +103,7 @@
         .text-brick-red { color: #e74a3b !important; }
         .bg-brick-red { background-color: #e74a3b !important; color: #fff !important; }
 
-        /* Grafik Alanı Sabit Boyutları */
+        /* Grafik Alanı Boyutları */
         .chart-box {
             position: relative;
             height: 320px;
@@ -106,7 +121,7 @@
 
     <div id="wrapper">
 
-        <!-- KENAR ÇUBUĞU (SIDEBAR) - ANTRASİT -->
+        <!-- KENAR ÇUBUĞU (SIDEBAR) -->
         <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Logo (Kırmızı Tema) -->
@@ -184,7 +199,8 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="missing-part.html">
-                    <i class="fas fa-fw fa-puzzle-piece i-yellow"></i>
+                    <i class="fas fa-fw puzzle-piece i-yellow"></i>
+                    <i class="fas fa-puzzle-piece i-yellow"></i>
                     <span>Eksik Parça Masası</span>
                 </a>
             </li>
@@ -372,7 +388,7 @@
 
                     </div>
 
-                    <!-- 3. KISIM: ÇUBUK GRAFİĞİ (PARÇA SAYISINA GÖRE MONTAJ SÜRELERİ) -->
+                    <!-- 3. KISIM: ÇUBUK GRAFİĞİ -->
                     <div class="row">
                         <div class="col-12">
                             <div class="card shadow-sm mb-4">
@@ -421,7 +437,7 @@
     <!-- Chart.js Kütüphanesi -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
 
-    <!-- Grafik JS Kodları (Garantili Çizim) -->
+    <!-- Grafik JS Kodları -->
     <script>
         window.addEventListener('load', function () {
             if (typeof Chart === 'undefined') {
@@ -432,7 +448,7 @@
             Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
             Chart.defaults.global.defaultFontColor = '#858796';
 
-            // 1. Çizgi Grafiği: Aylık Kılavuz İndirmeleri
+            // 1. Çizgi Grafiği
             var ctxLine = document.getElementById('canvasLineChart');
             if (ctxLine) {
                 new Chart(ctxLine.getContext('2d'), {
@@ -466,7 +482,7 @@
                 });
             }
 
-            // 2. Donut / Pasta Grafiği: Temalara Göre Set Dağılımı
+            // 2. Donut / Pasta Grafiği
             var ctxPie = document.getElementById('canvasPieChart');
             if (ctxPie) {
                 new Chart(ctxPie.getContext('2d'), {
@@ -488,7 +504,7 @@
                 });
             }
 
-            // 3. Çubuk Grafiği: Montaj Süreleri
+            // 3. Çubuk Grafiği
             var ctxBar = document.getElementById('canvasBarChart');
             if (ctxBar) {
                 new Chart(ctxBar.getContext('2d'), {

@@ -5,335 +5,384 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>LEGO Technic 1:8 Hypercar Detay ve Yapım Rehberi | BrickMaster</title>
+    <meta name="description" content="BrickMaster Studio & Store - Ürün Detayı">
+    <meta name="author" content="KOÜ Bilişim Sistemleri Mühendisliği">
 
-    <!-- Font & Stiller -->
+    <title>BrickMaster - LEGO Technic 1:8 Hypercar</title>
+
+    <!-- FontAwesome & Google Fonts -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900" rel="stylesheet">
+
+    <!-- SB Admin 2 Orijinal CSS -->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+    <style>
+        /* 1. SABİT ANTRASİT MENÜ BARI */
+        #accordionSidebar {
+            background-color: #2f323e !important;
+            background-image: none !important;
+        }
+
+        /* 2. KATEGORİ BAŞLIKLARI (SB-ADMIN MAVİSİNİ KESİN EZEN RENKLER) */
+        #accordionSidebar .sidebar-heading.h-blue { color: #4e88ff !important; font-weight: 800 !important; font-size: 0.72rem !important; letter-spacing: 0.8px; }
+        #accordionSidebar .sidebar-heading.h-green { color: #2ecc71 !important; font-weight: 800 !important; font-size: 0.72rem !important; letter-spacing: 0.8px; }
+        #accordionSidebar .sidebar-heading.h-yellow { color: #f1b935 !important; font-weight: 800 !important; font-size: 0.72rem !important; letter-spacing: 0.8px; }
+        #accordionSidebar .sidebar-heading.h-red { color: #e74a3b !important; font-weight: 800 !important; font-size: 0.72rem !important; letter-spacing: 0.8px; }
+
+        /* 3. KATEGORİ İKONLARI */
+        #accordionSidebar .i-blue { color: #4e88ff !important; }
+        #accordionSidebar .i-green { color: #2ecc71 !important; }
+        #accordionSidebar .i-yellow { color: #f1b935 !important; }
+        #accordionSidebar .i-red { color: #e74a3b !important; }
+
+        /* 4. MENÜ LİNKLERİ */
+        #accordionSidebar .nav-item .nav-link {
+            color: #d1d5db !important;
+            font-size: 0.92rem;
+            padding: 0.75rem 1rem;
+        }
+        #accordionSidebar .nav-item .nav-link:hover {
+            color: #ffffff !important;
+            background-color: rgba(255, 255, 255, 0.05) !important;
+        }
+
+        /* 5. "ÜRÜNLERİMİZ" & "BİRİMLERİMİZ" MAVİYE DÖNME ENGELLEYİCİ */
+        #accordionSidebar .nav-item .nav-link[data-toggle="collapse"]:not(.collapsed),
+        #accordionSidebar .nav-item .nav-link[data-toggle="collapse"]:hover,
+        #accordionSidebar .nav-item .nav-link[data-toggle="collapse"]:focus {
+            color: #f1b935 !important;
+            background-color: rgba(241, 185, 53, 0.12) !important;
+        }
+
+        #accordionSidebar .nav-item .nav-link[data-toggle="collapse"]::after {
+            color: #f1b935 !important;
+        }
+
+        #accordionSidebar .collapse-inner {
+            background-color: #242631 !important;
+            border: 1px solid #3c4052 !important;
+        }
+
+        #accordionSidebar .collapse-item {
+            color: #d1d5db !important;
+            font-size: 0.85rem !important;
+        }
+
+        #accordionSidebar .collapse-item:hover,
+        #accordionSidebar .collapse-item.active {
+            color: #f1b935 !important;
+            background-color: rgba(241, 185, 53, 0.15) !important;
+            font-weight: bold !important;
+        }
+
+        /* BU SAYFA KOLEKSİYON & BİRİMLER OLDUĞU İÇİN (SARI TEMA) */
+        .brand-text-yellow {
+            color: #f1b935 !important;
+            font-weight: 900 !important;
+            letter-spacing: 1.5px;
+            font-size: 1.15rem;
+        }
+        .brand-icon-yellow {
+            color: #f1b935 !important;
+        }
+    </style>
 </head>
 
 <body id="page-top">
 
-    <!-- Page Wrapper -->
     <div id="wrapper">
 
-        <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <!-- SIDEBAR -->
+        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
 
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-cubes"></i>
+            <!-- Logo (Sarı Tema) -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center my-2" href="index.html">
+                <div class="sidebar-brand-icon rotate-n-15 mr-2">
+                    <i class="fas fa-cubes fa-2x brand-icon-yellow"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">BrickMaster <sup>Studio</sup></div>
+                <div class="sidebar-brand-text brand-text-yellow">BRICKMASTER</div>
             </a>
 
-            <hr class="sidebar-divider my-0">
+            <hr class="sidebar-divider my-1 border-secondary">
 
+            <!-- 1. VİTRİN & GİRİŞ (MAVİ) -->
+            <div class="sidebar-heading h-blue mt-3">VİTRİN & GİRİŞ</div>
             <li class="nav-item">
                 <a class="nav-link" href="index.html">
-                    <i class="fas fa-fw fa-home"></i>
-                    <span>Anasayfa</span></a>
+                    <i class="fas fa-fw fa-home i-blue"></i>
+                    <span>Ana Sayfa</span>
+                </a>
             </li>
 
-            <hr class="sidebar-divider">
+            <hr class="sidebar-divider my-2 border-secondary">
 
-            <div class="sidebar-heading">Kurumsal</div>
-
+            <!-- 2. KURUMSAL (YEŞİL) -->
+            <div class="sidebar-heading h-green">KURUMSAL</div>
             <li class="nav-item">
                 <a class="nav-link" href="about.html">
-                    <i class="fas fa-fw fa-info-circle"></i>
-                    <span>Hakkımızda</span></a>
+                    <i class="fas fa-fw fa-info-circle i-green"></i>
+                    <span>Hakkımızda</span>
+                </a>
             </li>
-
             <li class="nav-item">
                 <a class="nav-link" href="mission.html">
-                    <i class="fas fa-fw fa-bullseye"></i>
-                    <span>Misyon & Vizyon</span></a>
-            </li>
-
-            <hr class="sidebar-divider">
-
-            <div class="sidebar-heading">Katalog & Hizmetler</div>
-
-            <li class="nav-item active">
-                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseProducts"
-                    aria-expanded="true" aria-controls="collapseProducts">
-                    <i class="fas fa-fw fa-box-open"></i>
-                    <span>Ürünlerimiz</span>
+                    <i class="fas fa-fw fa-bullseye i-green"></i>
+                    <span>Misyon & Vizyon</span>
                 </a>
-                <div id="collapseProducts" class="collapse show" aria-labelledby="headingProducts" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Set Kategorileri:</h6>
-                        <a class="collapse-item active" href="product-details.html">Koleksiyonluk Setler</a>
-                        <a class="collapse-item" href="product-details.html">MOC Özel Tasarımlar</a>
-                        <a class="collapse-item" href="product-details.html">Yedek & Tekil Parçalar</a>
-                    </div>
-                </div>
             </li>
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUnits"
-                    aria-expanded="true" aria-controls="collapseUnits">
-                    <i class="fas fa-fw fa-sitemap"></i>
-                    <span>Birimlerimiz</span>
-                </a>
-                <div id="collapseUnits" class="collapse" aria-labelledby="headingUnits" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Hizmet Birimleri:</h6>
-                        <a class="collapse-item" href="guides.html">Yapım Kılavuzları Arşivi</a>
-                        <a class="collapse-item" href="contact.html">Kayıp Parça Masası</a>
-                        <a class="collapse-item" href="logistics.html">Lojistik & Ayıklama</a>
-                    </div>
-                </div>
-            </li>
-
-            <hr class="sidebar-divider">
-
-            <div class="sidebar-heading">Veriler & İletişim</div>
-
-            <li class="nav-item">
-                <a class="nav-link" href="charts.html">
-                    <i class="fas fa-fw fa-chart-pie"></i>
-                    <span>Rakamlarla BrickMaster</span></a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="announcements.html">
-                    <i class="fas fa-fw fa-bullhorn"></i>
-                    <span>Duyurular & Kampanyalar</span></a>
-            </li>
-
             <li class="nav-item">
                 <a class="nav-link" href="contact.html">
-                    <i class="fas fa-fw fa-envelope"></i>
-                    <span>İletişim & Harita</span></a>
+                    <i class="fas fa-fw fa-envelope i-green"></i>
+                    <span>İletişim & Harita</span>
+                </a>
             </li>
 
+            <hr class="sidebar-divider my-2 border-secondary">
+
+            <!-- 3. KOLEKSİYON & BİRİMLER (SARI) -->
+            <div class="sidebar-heading h-yellow">KOLEKSİYON & BİRİMLER</div>
+            <li class="nav-item">
+                <!-- Sayfa açıldığında açık durması için 'collapsed' sınıfı yok ve aria-expanded='true' -->
+                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseProducts" aria-expanded="true">
+                    <i class="fas fa-fw fa-boxes i-yellow"></i>
+                    <span>Ürünlerimiz</span>
+                </a>
+                <div id="collapseProducts" class="collapse show" data-parent="#accordionSidebar">
+                    <div class="py-2 collapse-inner rounded">
+                        <h6 class="collapse-header text-warning font-weight-bold">Set Çeşitleri:</h6>
+                        <a class="collapse-item active" href="product-details.html">Koleksiyonluk Setler</a>
+                        <a class="collapse-item" href="product-details.html">MOC Özel Tasarımlar</a>
+                        <a class="collapse-item" href="product-details.html">Yedek Parçalar</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUnits">
+                    <i class="fas fa-fw fa-sitemap i-yellow"></i>
+                    <span>Birimlerimiz</span>
+                </a>
+                <div id="collapseUnits" class="collapse" data-parent="#accordionSidebar">
+                    <div class="py-2 collapse-inner rounded">
+                        <h6 class="collapse-header text-warning font-weight-bold">Birim Masaları:</h6>
+                        <a class="collapse-item" href="#">Kılavuz Arşivi</a>
+                        <a class="collapse-item" href="#">Lojistik & Ayıklama</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="missing-part.html">
+                    <i class="fas fa-fw fa-puzzle-piece i-yellow"></i>
+                    <span>Eksik Parça Masası</span>
+                </a>
+            </li>
+
+            <hr class="sidebar-divider my-2 border-secondary">
+
+            <!-- 4. VERİLER & YÖNETİM (KIRMIZI) -->
+            <div class="sidebar-heading h-red">VERİLER & YÖNETİM</div>
+            <li class="nav-item">
+                <a class="nav-link" href="charts.html">
+                    <i class="fas fa-fw fa-chart-pie i-red"></i>
+                    <span>Rakamlarla BrickMaster</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="announcements.html">
+                    <i class="fas fa-fw fa-bullhorn i-red"></i>
+                    <span>Duyuru Arşivi</span>
+                </a>
+            </li>
             <li class="nav-item">
                 <a class="nav-link" href="admin.html">
-                    <i class="fas fa-fw fa-user-shield"></i>
-                    <span>Yönetim Paneli</span></a>
+                    <i class="fas fa-fw fa-user-shield i-red"></i>
+                    <span>Yönetim Paneli</span>
+                </a>
             </li>
 
-            <hr class="sidebar-divider d-none d-md-block">
+            <hr class="sidebar-divider d-none d-md-block my-3 border-secondary">
 
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
-
         </ul>
-        <!-- End of Sidebar -->
+        <!-- SIDEBAR BİTİŞ -->
 
-        <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
+        <!-- İÇERİK ALANI -->
+        <div id="content-wrapper" class="d-flex flex-column bg-light">
 
-            <!-- Main Content -->
             <div id="content">
 
-                <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                <!-- TOPBAR -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow-sm">
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3 text-warning">
                         <i class="fa fa-bars"></i>
                     </button>
-                    <span class="navbar-brand mb-0 h6 font-weight-bold text-gray-800">
-                        <i class="fas fa-puzzle-piece text-primary mr-2"></i>Ürün ve Montaj Detay Portalı
-                    </span>
-                </nav>
-                <!-- End of Topbar -->
 
-                <!-- Sayfa İçeriği -->
+                    <h5 class="m-0 font-weight-bold text-gray-800 d-none d-sm-inline-block">
+                        <i class="fas fa-boxes text-warning mr-2"></i>BrickMaster Koleksiyon & Model Kataloğu
+                    </h5>
+
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <span class="text-gray-600 small font-weight-bold">
+                                KOÜ Bilişim Sistemleri Müh. | TBL303
+                            </span>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- SAYFA İÇERİĞİ -->
                 <div class="container-fluid">
 
-                    <!-- Breadcrumb Navigasyon -->
+                    <!-- Breadcrumb / Gezinti Çubuğu -->
                     <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb bg-white shadow-sm">
-                            <li class="breadcrumb-item"><a href="index.html">Anasayfa</a></li>
-                            <li class="breadcrumb-item"><a href="#">Ürünlerimiz</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">LEGO Technic 1:8 Hypercar</li>
+                        <ol class="breadcrumb bg-white shadow-sm small">
+                            <li class="breadcrumb-item"><a href="index.html" class="text-primary font-weight-bold">Ana Sayfa</a></li>
+                            <li class="breadcrumb-item text-muted">Ürünlerimiz</li>
+                            <li class="breadcrumb-item active text-dark font-weight-bold" aria-current="page">LEGO Technic 1:8 Hypercar</li>
                         </ol>
                     </nav>
 
-                    <!-- Ürün Başlık ve Temel Bilgi Kartı -->
-                    <div class="row">
-                        
-                        <!-- Sol Kolon: Ürün Görseli -->
-                        <div class="col-lg-6 mb-4">
-                            <div class="card shadow">
-                                <div class="card-body text-center p-2">
-                                    <img src="https://images.unsplash.com/photo-1585366119957-e9730b6d0f60?auto=format&fit=crop&w=800&q=80" 
-                                         alt="LEGO Technic Hypercar" class="img-fluid rounded">
-                                </div>
-                                <div class="card-footer bg-light d-flex justify-content-between align-items-center">
-                                    <span class="badge badge-warning text-dark p-2"><i class="fas fa-star mr-1"></i>Koleksiyonluk Özel Seri</span>
-                                    <span class="text-muted small">Ürün Kodu: #TK-42115</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Sağ Kolon: Fiyat, Özellikler ve Kılavuz İndirme -->
-                        <div class="col-lg-6 mb-4">
-                            <div class="card shadow h-100">
-                                <div class="card-header py-3 bg-primary text-white">
-                                    <h5 class="m-0 font-weight-bold">LEGO Technic 1:8 Hypercar (Lime Green Edition)</h5>
-                                </div>
+                    <!-- Ürün Başlığı & Fiyat Kartı -->
+                    <div class="row mb-4">
+                        <div class="col-lg-7">
+                            <div class="card shadow-sm border-0 mb-4">
+                                <img src="https://images.unsplash.com/photo-1585366119957-e9730b6d0f60?auto=format&fit=crop&w=1000&q=80" class="card-img-top rounded" alt="Technic Hypercar">
                                 <div class="card-body">
-                                    <div class="d-flex align-items-center justify-content-between mb-3">
-                                        <h3 class="text-success font-weight-bold mb-0">14.499 TL</h3>
-                                        <span class="badge badge-success px-3 py-2 font-weight-bold">Stokta Var (Son 4 Adet)</span>
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span class="badge badge-warning text-dark px-3 py-1 font-weight-bold">Koleksiyonluk Özel Seri</span>
+                                        <span class="text-muted small">Ürün Kodu: <strong>#TK-42115</strong></span>
                                     </div>
-
-                                    <p class="text-gray-700">
-                                        Mühendislik harikası aerodinamik gövde, hareketli pistonlara sahip V12 motor, 8 ileri vites kutusu ve kelebek kapı mekanizmasıyla gerçeğine birebir sadık kalınarak tasarlanmış ikonik koleksiyon seti.
+                                    <h3 class="font-weight-bold text-gray-800">Ferrari Daytona SP3 & Hypercar (1:8 Ölçek)</h3>
+                                    <p class="text-gray-600">
+                                        3.778 parçadan oluşan bu efsanevi model; çalışan 8 ileri vites kutusu, direksiyonla dönen ön tekerlekler, V12 piston motor ve kelebek kapı mekanizmasıyla mühendislik harikası bir deneyim sunar.
                                     </p>
-
-                                    <!-- Özellik Tablosu -->
-                                    <table class="table table-sm table-bordered mt-3 text-gray-800">
-                                        <tbody>
-                                            <tr>
-                                                <th class="bg-light" style="width: 40%;"><i class="fas fa-layer-group text-primary mr-2"></i>Parça Sayısı</th>
-                                                <td><strong>3.778 Parça</strong></td>
-                                            </tr>
-                                            <tr>
-                                                <th class="bg-light"><i class="fas fa-user-clock text-primary mr-2"></i>Önerilen Yaş</th>
-                                                <td>18+ (Uzman Düzey)</td>
-                                            </tr>
-                                            <tr>
-                                                <th class="bg-light"><i class="fas fa-ruler-combined text-primary mr-2"></i>Boyutlar</th>
-                                                <td>60 cm (Boy) x 25 cm (En) x 14 cm (Yükseklik)</td>
-                                            </tr>
-                                            <tr>
-                                                <th class="bg-light"><i class="fas fa-stopwatch text-primary mr-2"></i>Ort. Yapım Süresi</th>
-                                                <td>16 - 20 Saat</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-
-                                    <!-- PDF Kılavuz İndirme ve Satın Alma Alanı -->
-                                    <div class="alert alert-info d-flex justify-content-between align-items-center mt-3">
-                                        <div>
-                                            <i class="fas fa-file-pdf text-danger fa-2x mr-2 align-middle"></i>
-                                            <strong>Resmi Montaj Kitapçığı (PDF)</strong>
-                                            <div class="small text-muted">Baskı kalitesinde torba şemaları (28.4 MB)</div>
-                                        </div>
-                                        <a href="#" class="btn btn-danger btn-sm font-weight-bold shadow-sm">
-                                            <i class="fas fa-download mr-1"></i>Kılavuzu İndir
-                                        </a>
-                                    </div>
-
-                                    <button class="btn btn-primary btn-block btn-lg mt-3 font-weight-bold shadow">
-                                        <i class="fas fa-shopping-cart mr-2"></i>Koleksiyona Ekle / Sipariş Ver
-                                    </button>
                                 </div>
                             </div>
                         </div>
 
-                    </div>
-
-                    <!-- Torba Torba Adım Adım Yapım Aşamaları (Tabs / Sekmeler) -->
-                    <div class="row">
-                        <div class="col-12 mb-4">
-                            <div class="card shadow">
-                                <div class="card-header bg-white py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">
-                                        <i class="fas fa-tools mr-2"></i>Adım Adım Torba Montaj Rehberi (Building Steps)
-                                    </h6>
-                                </div>
+                        <!-- Sağ Taraf: Fiyat, Özellikler & PDF Kılavuz -->
+                        <div class="col-lg-5">
+                            <div class="card shadow-sm border-left-warning mb-4">
                                 <div class="card-body">
-                                    
-                                    <!-- Sekme Başlıkları -->
-                                    <ul class="nav nav-tabs font-weight-bold" id="buildTabs" role="tablist">
-                                        <li class="nav-item">
-                                            <a class="nav-link active" id="bag1-tab" data-toggle="tab" href="#bag1" role="tab">
-                                                <i class="fas fa-cogs mr-1"></i>Torba 1: Şasi ve Vites Kutusu
-                                            </a>
+                                    <h6 class="text-xs font-weight-bold text-warning text-uppercase mb-1">Satış Fiyatı & Teslimat</h6>
+                                    <h2 class="font-weight-bold text-gray-800 mb-3">14.999 ₺</h2>
+
+                                    <ul class="list-group list-group-flush small mb-4">
+                                        <li class="list-group-item d-flex justify-content-between px-0">
+                                            <span>Parça Sayısı:</span>
+                                            <strong>3.778 Parça</strong>
                                         </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" id="bag2-tab" data-toggle="tab" href="#bag2" role="tab">
-                                                <i class="fas fa-tachometer-alt mr-1"></i>Torba 2: V12 Motor Bloğu
-                                            </a>
+                                        <li class="list-group-item d-flex justify-content-between px-0">
+                                            <span>Zorluk Seviyesi:</span>
+                                            <strong class="text-danger">İleri Düzey (Expert 18+)</strong>
                                         </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" id="bag3-tab" data-toggle="tab" href="#bag3" role="tab">
-                                                <i class="fas fa-car mr-1"></i>Torba 3: Kaporta & Kokpit
-                                            </a>
+                                        <li class="list-group-item d-flex justify-content-between px-0">
+                                            <span>Boyutlar:</span>
+                                            <strong>59 cm Uzunluk, 25 cm Genişlik</strong>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between px-0">
+                                            <span>Stok Durumu:</span>
+                                            <strong class="text-success"><i class="fas fa-check mr-1"></i>Hemen Teslim (Aynı Gün Kargo)</strong>
                                         </li>
                                     </ul>
 
-                                    <!-- Sekme İçerikleri -->
-                                    <div class="tab-content border-left border-right border-bottom p-4 bg-light" id="buildTabsContent">
-                                        
-                                        <!-- Torba 1 İçerik -->
-                                        <div class="tab-pane fade show active" id="bag1" role="tabpanel">
-                                            <h6 class="font-weight-bold text-dark">Aşama 1: Arka Aks ve 8 İleri Şanzıman Kurulumu</h6>
-                                            <p class="text-gray-700">Bu aşamada diferansiyel dişlilerini yerleştirirken kırmızı ve sarı aktarma dişlilerinin birbirine dik hizalandığından emin olun. Hatalı dişli sıralaması vites geçişlerini kilitleyebilir.</p>
-                                            <ul class="text-gray-700">
-                                                <li>Kritik Adım: #42 nolu adımda 16 dişli kavramanın yönüne dikkat edin.</li>
-                                                <li>Kullanılan Temel Parçalar: Technic Beam parçaları, süspansiyon yayları ve merkez mil.</li>
-                                            </ul>
-                                        </div>
+                                    <a href="#" class="btn btn-warning btn-block font-weight-bold text-dark shadow-sm py-2 mb-2" onclick="alert('Satın alma simülasyonu: Model sepete eklendi.'); return false;">
+                                        <i class="fas fa-shopping-cart mr-2"></i>Hemen Sipariş Ver
+                                    </a>
 
-                                        <!-- Torba 2 İçerik -->
-                                        <div class="tab-pane fade" id="bag2" role="tabpanel">
-                                            <h6 class="font-weight-bold text-dark">Aşama 2: V12 Hareketli Pistonların Entegrasyonu</h6>
-                                            <p class="text-gray-700">Motor bloğunu şasiye bağlarken krank milinin serbestçe döndüğünü tekerlekleri çevirerek test edin. Pistonların yukarı-aşağı hareketi pürüzsüz olmalıdır.</p>
-                                            <ul class="text-gray-700">
-                                                <li>Kritik Adım: Sarı renkli piston kollarını takarken aşırı güç uygulamaktan kaçının.</li>
-                                                <li>Tahmini Süre: 3.5 Saat.</li>
-                                            </ul>
-                                        </div>
+                                    <a href="#" class="btn btn-outline-danger btn-block font-weight-bold btn-sm py-2" onclick="alert('Technic_SP3_Montaj_Kilavuzu.pdf indiriliyor...'); return false;">
+                                        <i class="fas fa-file-pdf mr-2"></i>Resmi Montaj Kılavuzunu İndir (PDF - 45 MB)
+                                    </a>
+                                </div>
+                            </div>
 
-                                        <!-- Torba 3 İçerik -->
-                                        <div class="tab-pane fade" id="bag3" role="tabpanel">
-                                            <h6 class="font-weight-bold text-dark">Aşama 3: Lime Green Paneller ve Kelebek Kapılar</h6>
-                                            <p class="text-gray-700">Son aşamada kokpit göstergeleri, direksiyondan kumanda edilen ön tekerlekler ve açılır kelebek kapıların hidrolik yayları takılarak model tamamlanır.</p>
-                                            <ul class="text-gray-700">
-                                                <li>Kritik Adım: Kapı açılma açısını ayarlayan durdurucu pinlerin eksiksiz takılması.</li>
-                                                <li>Tebrikler: Modeliniz vitrin sergilemesine hazır!</li>
-                                            </ul>
-                                        </div>
+                            <!-- Eksik Parça Destek Kutusu -->
+                            <div class="card shadow-sm border-0 bg-white">
+                                <div class="card-body small text-gray-700">
+                                    <h6 class="font-weight-bold text-dark mb-1"><i class="fas fa-puzzle-piece text-warning mr-1"></i> Parçanız mı Eksik?</h6>
+                                    <p class="mb-2">Bu modelin montajı sırasında kaybolan veya hatalı çıkan parçalar için doğrudan parça masamıza başvurabilirsiniz.</p>
+                                    <a href="missing-part.html" class="btn btn-sm btn-outline-warning text-dark font-weight-bold">
+                                        Kayıp Parça Bildirimi Yap &rarr;
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                                    </div>
-
+                    <!-- 2. KISIM: ADIM ADIM TORBA MONTAJ AŞAMALARI (BOOTSTRAP TABS) -->
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-header py-3 bg-white">
+                            <h6 class="m-0 font-weight-bold text-dark">
+                                <i class="fas fa-layer-group text-warning mr-2"></i>Adım Adım Torba Montaj Aşamaları
+                            </h6>
+                        </div>
+                        <div class="card-body">
+                            <ul class="nav nav-tabs font-weight-bold" id="torbaTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active text-warning" id="bag1-tab" data-toggle="tab" href="#bag1" role="tab">Torba 1: Şasi & Dişliler</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" id="bag2-tab" data-toggle="tab" href="#bag2" role="tab">Torba 2: V12 Motor Bloğu</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" id="bag3-tab" data-toggle="tab" href="#bag3" role="tab">Torba 3: Kaporta & Kokpit</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content p-3 border border-top-0 rounded-bottom bg-light" id="torbaTabContent">
+                                <div class="tab-pane fade show active" id="bag1" role="tabpanel">
+                                    <h5 class="font-weight-bold text-gray-800 mb-2">Aşama 1: Şasi İskeleti ve 8 İleri Sıralı Şanzıman</h5>
+                                    <p class="text-gray-700 small">
+                                        İlk montaj aşamasında modelin temel dayanıklılığını oluşturan Technic kirişleri bir araya getirilir. Direksiyon rot kolları ve çalışan diferansiyel dişli sistemi bu adımda kusursuz olarak monte edilir.
+                                    </p>
+                                    <span class="badge badge-secondary">Parça: 1.150 Adet</span>
+                                    <span class="badge badge-info">Ort. Süre: 4.5 Saat</span>
+                                </div>
+                                <div class="tab-pane fade" id="bag2" role="tabpanel">
+                                    <h5 class="font-weight-bold text-gray-800 mb-2">Aşama 2: V12 Pistonlu Motor ve Süspansiyon Kuleleri</h5>
+                                    <p class="text-gray-700 small">
+                                        Tekerlekler döndüğünde hareket eden sarı piston mekanizması şasiye entegre edilir. Bağımsız çift salıncaklı süspansiyon yayları monte edilerek arka dingil gövdeye bağlanır.
+                                    </p>
+                                    <span class="badge badge-secondary">Parça: 1.280 Adet</span>
+                                    <span class="badge badge-info">Ort. Süre: 5 Saat</span>
+                                </div>
+                                <div class="tab-pane fade" id="bag3" role="tabpanel">
+                                    <h5 class="font-weight-bold text-gray-800 mb-2">Aşama 3: Dış Gövde Panelleri, Koltuklar ve Kelebek Kapılar</h5>
+                                    <p class="text-gray-700 small">
+                                        Aerodinamik kırmızı gövde panelleri, açılır tavan ve kavisli arka difüzör tamamlanır. Son olarak sergi plakası ve orijinal jantlar takılarak araç vitrine hazır hale getirilir.
+                                    </p>
+                                    <span class="badge badge-secondary">Parça: 1.348 Adet</span>
+                                    <span class="badge badge-info">Ort. Süre: 6 Saat</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                 </div>
-                <!-- /.container-fluid -->
-
             </div>
-            <!-- End of Main Content -->
 
-            <!-- Footer (İster: Adres, telefon, tasarımcı bilgileri) -->
-            <footer class="sticky-footer bg-white shadow">
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white shadow-sm mt-4">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>BrickMaster Studio &copy; 2026-2027 Güz Dönemi | TBL303 Web Tasarımı Projesi</span>
-                        <div class="small text-muted mt-1">İzmit, Kocaeli | Tel: +90 (262) 303 10 00 | E-posta: info@brickmaster.com</div>
+                        <span class="text-gray-700 font-weight-bold">
+                            BrickMaster Studio & Store &copy; 2026 | Kocaeli Üniversitesi Bilişim Sistemleri Mühendisliği TBL303
+                        </span>
                     </div>
                 </div>
             </footer>
-            <!-- End of Footer -->
 
         </div>
-        <!-- End of Content Wrapper -->
-
     </div>
-    <!-- End of Page Wrapper -->
 
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
-
-    <!-- Core Scripts -->
+    <!-- JS Kütüphaneleri -->
     <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
     <script src="js/sb-admin-2.min.js"></script>
 
 </body>
-
 </html>

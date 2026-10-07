@@ -19,36 +19,25 @@
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
     <style>
-        /* mission.html İLE BİREBİR AYNI ANTRASİT MENÜ */
-        #accordionSidebar.sidebar-brickmaster {
+        /* 1. SABİT ANTRASİT MENÜ BARI */
+        #accordionSidebar {
             background-color: #2f323e !important;
             background-image: none !important;
         }
 
-        /* BU SAYFA VİTRİN & GİRİŞ OLDUĞU İÇİN LOGO: MAVİ */
-        .sidebar-brand .brand-text-blue {
-            color: #4e88ff !important;
-            font-weight: 900 !important;
-            letter-spacing: 1.5px;
-            font-size: 1.15rem;
-        }
-        .sidebar-brand .brand-icon-blue {
-            color: #4e88ff !important;
-        }
-
-        /* Menü Kategori Başlık Renkleri */
+        /* 2. KATEGORİ BAŞLIKLARI (SB-ADMIN MAVİSİNİ KESİN EZEN RENKLER) */
         #accordionSidebar .sidebar-heading.h-blue { color: #4e88ff !important; font-weight: 800 !important; font-size: 0.72rem !important; letter-spacing: 0.8px; }
         #accordionSidebar .sidebar-heading.h-green { color: #2ecc71 !important; font-weight: 800 !important; font-size: 0.72rem !important; letter-spacing: 0.8px; }
         #accordionSidebar .sidebar-heading.h-yellow { color: #f1b935 !important; font-weight: 800 !important; font-size: 0.72rem !important; letter-spacing: 0.8px; }
         #accordionSidebar .sidebar-heading.h-red { color: #e74a3b !important; font-weight: 800 !important; font-size: 0.72rem !important; letter-spacing: 0.8px; }
 
-        /* Menü İkon Renkleri */
+        /* 3. KATEGORİ İKONLARI */
         #accordionSidebar .i-blue { color: #4e88ff !important; }
         #accordionSidebar .i-green { color: #2ecc71 !important; }
         #accordionSidebar .i-yellow { color: #f1b935 !important; }
         #accordionSidebar .i-red { color: #e74a3b !important; }
 
-        /* Menü Linkleri & Mavi Aktif Vurgu */
+        /* 4. MENÜ LİNKLERİ */
         #accordionSidebar .nav-item .nav-link {
             color: #d1d5db !important;
             font-size: 0.92rem;
@@ -57,6 +46,31 @@
         #accordionSidebar .nav-item .nav-link:hover {
             color: #ffffff !important;
             background-color: rgba(255, 255, 255, 0.05) !important;
+        }
+
+        /* 5. AÇILIR MENÜ (COLLAPSE) İÇLİK */
+        #accordionSidebar .collapse-inner {
+            background-color: #242631 !important;
+            border: 1px solid #3c4052 !important;
+        }
+        #accordionSidebar .collapse-item {
+            color: #d1d5db !important;
+            font-size: 0.85rem !important;
+        }
+        #accordionSidebar .collapse-item:hover {
+            color: #f1b935 !important;
+            background-color: rgba(241, 185, 53, 0.1) !important;
+        }
+
+        /* BU SAYFA VİTRİN & GİRİŞ OLDUĞU İÇİN (MAVİ TEMA) */
+        .brand-text-blue {
+            color: #4e88ff !important;
+            font-weight: 900 !important;
+            letter-spacing: 1.5px;
+            font-size: 1.15rem;
+        }
+        .brand-icon-blue {
+            color: #4e88ff !important;
         }
         #accordionSidebar .nav-item.active-blue .nav-link {
             color: #ffffff !important;
@@ -83,14 +97,14 @@
             border-left: 5px solid #4e88ff;
         }
 
-        /* Duyuru Kartı Hover */
+        /* Duyuru Kartları */
         .announcement-box {
             transition: all 0.2s ease-in-out;
             cursor: pointer;
         }
         .announcement-box:hover {
             transform: translateY(-3px);
-            box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+            box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
         }
     </style>
 </head>
@@ -99,8 +113,8 @@
 
     <div id="wrapper">
 
-        <!-- SIDEBAR -->
-        <ul class="navbar-nav sidebar sidebar-dark sidebar-brickmaster accordion" id="accordionSidebar">
+        <!-- SIDEBAR (TÜM SAYFALARLA BİREBİR AYNI ANTRASİT MENÜ) -->
+        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Logo (Mavi Tema) -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center my-2" href="index.html">
@@ -140,7 +154,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="contact.html">
                     <i class="fas fa-fw fa-envelope i-green"></i>
-                    <span>İletişim & Eksik Parça</span>
+                    <span>İletişim & Harita</span>
                 </a>
             </li>
 
@@ -154,7 +168,7 @@
                     <span>Ürünlerimiz</span>
                 </a>
                 <div id="collapseProducts" class="collapse" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
+                    <div class="py-2 collapse-inner rounded">
                         <h6 class="collapse-header text-warning font-weight-bold">Set Çeşitleri:</h6>
                         <a class="collapse-item" href="product-details.html">Koleksiyonluk Setler</a>
                         <a class="collapse-item" href="product-details.html">MOC Özel Tasarımlar</a>
@@ -168,13 +182,18 @@
                     <span>Birimlerimiz</span>
                 </a>
                 <div id="collapseUnits" class="collapse" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
+                    <div class="py-2 collapse-inner rounded">
                         <h6 class="collapse-header text-warning font-weight-bold">Birim Masaları:</h6>
                         <a class="collapse-item" href="#">Kılavuz Arşivi</a>
-                        <a class="collapse-item" href="contact.html">Kayıp Parça Masası</a>
                         <a class="collapse-item" href="#">Lojistik & Ayıklama</a>
                     </div>
                 </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="missing-part.html">
+                    <i class="fas fa-fw fa-puzzle-piece i-yellow"></i>
+                    <span>Eksik Parça Masası</span>
+                </a>
             </li>
 
             <hr class="sidebar-divider my-2 border-secondary">
@@ -248,7 +267,7 @@
                                 <img src="https://images.unsplash.com/photo-1585366119957-e9730b6d0f60?auto=format&fit=crop&w=1200&q=80" class="d-block w-100" alt="LEGO Hypercar">
                                 <div class="carousel-caption text-left">
                                     <span class="badge badge-primary px-3 py-1 mb-2">LEGO Technic 1:8 Serisi</span>
-                                    <h3 class="font-weight-bold text-white">Ferrari Daytona SP3 & Hypercar (3.778 Parça)</h3>
+                                    <h3 class="font-weight-bold text-white">Ferrari Daytona SP3 Hypercar (3.778 Parça)</h3>
                                     <p class="mb-3">Çalışan 8 ileri vites kutusu, V12 piston motor ve vektörel dijital kılavuz dahil!</p>
                                     <a href="product-details.html" class="btn btn-primary font-weight-bold btn-sm shadow">
                                         <i class="fas fa-shopping-bag mr-1"></i> Detayları Gör & Satın Al &rarr;
@@ -308,7 +327,7 @@
                                             <small class="text-muted">14 Ekim 2026</small>
                                         </div>
                                         <h6 class="font-weight-bold text-gray-800 mb-1">2026 Technic Serisi Orijinal Montaj Kılavuzları Eklendi</h6>
-                                        <p class="small text-muted mb-0">Tüm 1:8 süper spor araçların torba bazlı yapım PDF'leri arşive yüklendi. Detay ve indirilebilir dosya için tıklayın.</p>
+                                        <p class="small text-muted mb-0">Tüm 1:8 süper spor araçların torba bazlı yapım PDF'leri arşive yüklendi. Detay ve dosya eki için tıklayın.</p>
                                     </div>
                                 </div>
                                 <!-- Duyuru 2 -->
@@ -362,7 +381,7 @@
                 </div>
             </div>
 
-            <!-- MODALLAR (Dersin 4. İsteri: Dosya Ekli Açılır Pencereler) -->
+            <!-- MODALLAR (Dersin 4. İsteri) -->
             <!-- Modal 1 -->
             <div class="modal fade" id="modalDuyuru1" tabindex="-1" role="dialog" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
@@ -438,7 +457,7 @@
                             <button type="button" class="close text-dark" data-dismiss="modal"><span>&times;</span></button>
                         </div>
                         <div class="modal-body">
-                            <p class="text-gray-700">Özgün modelleme projelerinin değerlendirileceği şartname dökümanıdır.</p>
+                            <p class="text-gray-700">Özgün modelleme projelerinin değerlendirileceği şartname dokümanıdır.</p>
                             <div class="p-3 bg-light rounded border mt-3">
                                 <h6 class="font-weight-bold text-dark mb-1"><i class="fas fa-paperclip mr-1"></i>Duyuru Dosya Eki:</h6>
                                 <a href="#" class="btn btn-sm btn-warning text-dark font-weight-bold" onclick="alert('Yarisma_Sartnamesi.pdf indiriliyor...'); return false;">
