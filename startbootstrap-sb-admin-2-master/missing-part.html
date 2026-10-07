@@ -19,22 +19,25 @@
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
     <style>
-        /* SABİT ANTRASİT MENÜ */
+        /* 1. SABİT ANTRASİT MENÜ BARI */
         #accordionSidebar {
             background-color: #2f323e !important;
             background-image: none !important;
         }
 
+        /* 2. KATEGORİ BAŞLIKLARI (SB-ADMIN MAVİSİNİ KESİN EZEN RENKLER) */
         #accordionSidebar .sidebar-heading.h-blue { color: #4e88ff !important; font-weight: 800 !important; font-size: 0.72rem !important; letter-spacing: 0.8px; }
         #accordionSidebar .sidebar-heading.h-green { color: #2ecc71 !important; font-weight: 800 !important; font-size: 0.72rem !important; letter-spacing: 0.8px; }
         #accordionSidebar .sidebar-heading.h-yellow { color: #f1b935 !important; font-weight: 800 !important; font-size: 0.72rem !important; letter-spacing: 0.8px; }
         #accordionSidebar .sidebar-heading.h-red { color: #e74a3b !important; font-weight: 800 !important; font-size: 0.72rem !important; letter-spacing: 0.8px; }
 
+        /* 3. KATEGORİ İKONLARI */
         #accordionSidebar .i-blue { color: #4e88ff !important; }
         #accordionSidebar .i-green { color: #2ecc71 !important; }
         #accordionSidebar .i-yellow { color: #f1b935 !important; }
         #accordionSidebar .i-red { color: #e74a3b !important; }
 
+        /* 4. MENÜ LİNKLERİ */
         #accordionSidebar .nav-item .nav-link {
             color: #d1d5db !important;
             font-size: 0.92rem;
@@ -45,7 +48,23 @@
             background-color: rgba(255, 255, 255, 0.05) !important;
         }
 
-        /* BU SAYFA KOLEKSİYON & BİRİMLER ALTINDA (SARI TEMA): */
+        /* 5. AÇILIR MENÜ (COLLAPSE) İÇLİK */
+        #accordionSidebar .collapse-inner {
+            background-color: #242631 !important;
+            border: 1px solid #3c4052 !important;
+        }
+        #accordionSidebar .collapse-item {
+            color: #d1d5db !important;
+            font-size: 0.85rem !important;
+        }
+        #accordionSidebar .collapse-item:hover {
+            color: #f1b935 !important;
+            background-color: rgba(241, 185, 53, 0.1) !important;
+        }
+
+        /* ==============================================================
+           BU SAYFA "KOLEKSİYON & BİRİMLER" KATEGORİSİ OLDUĞU İÇİN (SARI TEMA):
+           ============================================================== */
         .brand-text-yellow {
             color: #f1b935 !important;
             font-weight: 900 !important;
@@ -62,8 +81,12 @@
             border-left: 4px solid #f1b935 !important;
         }
 
-        .border-left-brick-yellow { border-left: .25rem solid #f1b935 !important; }
+        /* Sayfa İçi Vurgular */
         .text-brick-yellow { color: #f1b935 !important; }
+        .bg-brick-yellow { background-color: #f1b935 !important; color: #212529 !important; }
+        .border-left-brick-yellow { border-left: .25rem solid #f1b935 !important; }
+        .border-left-brick-green { border-left: .25rem solid #2ecc71 !important; }
+        .border-left-brick-blue { border-left: .25rem solid #4e88ff !important; }
     </style>
 </head>
 
@@ -84,7 +107,7 @@
 
             <hr class="sidebar-divider my-1 border-secondary">
 
-            <!-- 1. VİTRİN & GİRİŞ -->
+            <!-- 1. VİTRİN & GİRİŞ (MAVİ) -->
             <div class="sidebar-heading h-blue mt-3">VİTRİN & GİRİŞ</div>
             <li class="nav-item">
                 <a class="nav-link" href="index.html">
@@ -95,7 +118,7 @@
 
             <hr class="sidebar-divider my-2 border-secondary">
 
-            <!-- 2. KURUMSAL -->
+            <!-- 2. KURUMSAL (YEŞİL) -->
             <div class="sidebar-heading h-green">KURUMSAL</div>
             <li class="nav-item">
                 <a class="nav-link" href="about.html">
@@ -118,7 +141,7 @@
 
             <hr class="sidebar-divider my-2 border-secondary">
 
-            <!-- 3. KOLEKSİYON & BİRİMLER -->
+            <!-- 3. KOLEKSİYON & BİRİMLER (SARI) -->
             <div class="sidebar-heading h-yellow">KOLEKSİYON & BİRİMLER</div>
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProducts">
@@ -126,11 +149,11 @@
                     <span>Ürünlerimiz</span>
                 </a>
                 <div id="collapseProducts" class="collapse" data-parent="#accordionSidebar">
-                    <div class="py-2 collapse-inner rounded bg-gray-900 border border-secondary">
+                    <div class="py-2 collapse-inner rounded">
                         <h6 class="collapse-header text-warning font-weight-bold">Set Çeşitleri:</h6>
-                        <a class="collapse-item text-light" href="product-details.html">Koleksiyonluk Setler</a>
-                        <a class="collapse-item text-light" href="product-details.html">MOC Özel Tasarımlar</a>
-                        <a class="collapse-item text-light" href="product-details.html">Yedek Parçalar</a>
+                        <a class="collapse-item" href="product-details.html">Koleksiyonluk Setler</a>
+                        <a class="collapse-item" href="product-details.html">MOC Özel Tasarımlar</a>
+                        <a class="collapse-item" href="product-details.html">Yedek Parçalar</a>
                     </div>
                 </div>
             </li>
@@ -140,10 +163,10 @@
                     <span>Birimlerimiz</span>
                 </a>
                 <div id="collapseUnits" class="collapse" data-parent="#accordionSidebar">
-                    <div class="py-2 collapse-inner rounded bg-gray-900 border border-secondary">
+                    <div class="py-2 collapse-inner rounded">
                         <h6 class="collapse-header text-warning font-weight-bold">Birim Masaları:</h6>
-                        <a class="collapse-item text-light" href="#">Kılavuz Arşivi</a>
-                        <a class="collapse-item text-light" href="#">Lojistik & Ayıklama</a>
+                        <a class="collapse-item" href="#">Kılavuz Arşivi</a>
+                        <a class="collapse-item" href="#">Lojistik & Ayıklama</a>
                     </div>
                 </div>
             </li>
@@ -157,7 +180,7 @@
 
             <hr class="sidebar-divider my-2 border-secondary">
 
-            <!-- 4. VERİLER & YÖNETİM -->
+            <!-- 4. VERİLER & YÖNETİM (KIRMIZI) -->
             <div class="sidebar-heading h-red">VERİLER & YÖNETİM</div>
             <li class="nav-item">
                 <a class="nav-link" href="charts.html">
@@ -213,6 +236,7 @@
                 <!-- SAYFA İÇERİĞİ -->
                 <div class="container-fluid">
 
+                    <!-- Başlık & Vitrin Butonu -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <div>
                             <h1 class="h3 mb-0 text-gray-800 font-weight-bold">Eksik / Kusurlu Parça Masası</h1>
@@ -226,7 +250,7 @@
                     <!-- BİLGİ KUTUSU -->
                     <div class="alert alert-warning border-left-brick-yellow shadow-sm mb-4" role="alert">
                         <i class="fas fa-shield-alt mr-2"></i>
-                        <strong>%100 Orijinal Parça Garantisi:</strong> Kılavuzun son sayfasında yer alan 7 haneli Element ID kodunu girmeniz durumunda, eksik parçanız doğrudan stoklarımızdan ayrılır ve <strong>3 iş günü içinde ücretsiz kargo</strong> ile adresinize gönderilir.
+                        <strong>%100 Orijinal Parça Garantisi:</strong> Kılavuzun son sayfasında yer alan 7 haneli Element ID kodunu girdiğinizde, eksik parçanız doğrudan stoklarımızdan ayrılır ve <strong>3 iş günü içinde ücretsiz kargo</strong> ile adresinize gönderilir.
                     </div>
 
                     <!-- FORM VE YARDIM KILAVUZU -->
@@ -241,13 +265,14 @@
                                 </div>
                                 <div class="card-body">
 
+                                    <!-- Başarı Bildirimi (JS ile Açılır) -->
                                     <div id="missingPartSuccess" class="alert alert-success d-none alert-dismissible fade show" role="alert">
                                         <i class="fas fa-check-circle mr-2"></i><strong>Talebiniz Alındı!</strong> Parça envanterde rezerve edilmiştir. Kargo takip kodunuz e-posta adresinize gönderilecektir.
                                         <button type="button" class="close" data-dismiss="alert"><span>&times;</span></button>
                                     </div>
 
                                     <form id="missingPartForm">
-                                        <!-- 1. Grup: Set ve Model Bilgileri -->
+                                        <!-- 1. Grup: Set Bilgileri -->
                                         <div class="form-row bg-light p-3 rounded border mb-3">
                                             <div class="col-12 mb-2">
                                                 <span class="small font-weight-bold text-warning d-block">
@@ -256,7 +281,7 @@
                                             </div>
                                             <div class="form-group col-md-4">
                                                 <label for="pSetNo" class="small font-weight-bold text-gray-700">Set Kodu <span class="text-danger">*</span></label>
-                                                <input type="text" class="form-control form-control-sm" id="pSetNo" placeholder="Örn: 42115" required>
+                                                <input type="text" class="form-control form-control-sm" id="pSetNo" placeholder="Örn: 42115 veya MOC-104" required>
                                             </div>
                                             <div class="form-group col-md-5">
                                                 <label for="pSetName" class="small font-weight-bold text-gray-700">Set İsmi <span class="text-danger">*</span></label>
@@ -293,7 +318,7 @@
                                             </div>
                                         </div>
 
-                                        <!-- 3. Grup: İletişim & Kargo Adresi -->
+                                        <!-- 3. Grup: İletişim & Kargo Teslimat Adresi -->
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
                                                 <label for="uName" class="small font-weight-bold">Ad Soyad <span class="text-danger">*</span></label>
@@ -313,7 +338,7 @@
                                             </div>
                                             <div class="form-group col-12">
                                                 <label for="uAddress" class="small font-weight-bold">Kargonun Gönderileceği Teslimat Adresi <span class="text-danger">*</span></label>
-                                                <textarea class="form-control form-control-sm" id="uAddress" rows="2" placeholder="Mahalle, Cadde, Sokak, Daire, İlçe / İl" required></textarea>
+                                                <textarea class="form-control form-control-sm" id="uAddress" rows="2" placeholder="Mahalle, Cadde, Sokak, Daire No, İlçe / İl" required></textarea>
                                             </div>
                                         </div>
 
@@ -334,22 +359,22 @@
                                     </h6>
                                 </div>
                                 <div class="card-body small text-gray-700">
-                                    <p>Resmi LEGO veya MOC montaj kılavuzlarının en arka sayfalarında tüm parçaların parça numarası (Element ID) listelenir.</p>
-                                    <div class="p-2 bg-light rounded border text-center mb-2">
+                                    <p>Resmi LEGO ve MOC montaj kılavuzlarının en son sayfalarında setteki her parçanın Element ID numarası listelenir.</p>
+                                    <div class="p-3 bg-light rounded border text-center mb-3">
                                         <i class="fas fa-barcode fa-2x text-muted mb-1 d-block"></i>
-                                        <span class="font-weight-bold text-dark">Örnek: 6271165</span>
+                                        <span class="font-weight-bold text-dark">Örnek Kod: 6271165</span>
                                     </div>
-                                    <p class="mb-0">Bu kodu yazdığınızda stoklarımızdan doğru renk ve boyuttaki orijinal parça eşleştirilir.</p>
+                                    <p class="mb-0">Bu kodu girdiğinizde stok sistemimiz orijinal parçayı otomatik eşleştirerek torba hazırlama aşamasına alır.</p>
                                 </div>
                             </div>
 
                             <div class="card shadow-sm border-left-brick-yellow">
                                 <div class="card-body small text-gray-700">
-                                    <h6 class="font-weight-bold text-dark mb-2"><i class="fas fa-truck text-warning mr-1"></i> Teslimat Süreci</h6>
+                                    <h6 class="font-weight-bold text-dark mb-2"><i class="fas fa-truck text-warning mr-1"></i> Gönderim Süreci</h6>
                                     <ul class="pl-3 mb-0">
-                                        <li>Talep onayından sonra 24 saatte hazırlanır.</li>
-                                        <li>MNG / Yurtiçi Kargo ile karşı ödemesiz (ücretsiz) yola çıkar.</li>
-                                        <li>Kargo takip kodu SMS ve e-posta ile bildirilir.</li>
+                                        <li>Talep formunuz onaylandıktan sonra 24 saat içinde hazırlanır.</li>
+                                        <li>Yurtiçi Kargo ile <strong>ücretsiz / karşı ödemesiz</strong> kargoya verilir.</li>
+                                        <li>Kargo takip numarası e-posta adresinize iletilir.</li>
                                     </ul>
                                 </div>
                             </div>
@@ -375,10 +400,12 @@
 
     <!-- JS Kütüphaneleri -->
     <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
     <script src="js/sb-admin-2.min.js"></script>
 
+    <!-- Form Gönderim Simülasyonu -->
     <script>
         $(document).ready(function() {
             $('#missingPartForm').on('submit', function(e) {
