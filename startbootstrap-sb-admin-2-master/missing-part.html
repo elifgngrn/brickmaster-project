@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="BrickMaster Studio & Store - Eksik Parça Masası">
+    <meta name="author" content="KOÜ Bilişim Sistemleri Mühendisliği">
+
+    <title>BrickMaster - Eksik Parça Masası</title>
+
+    <!-- FontAwesome & Google Fonts -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900" rel="stylesheet">
+
+    <!-- SB Admin 2 Orijinal CSS -->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+    <style>
+        /* SABİT ANTRASİT MENÜ */
+        #accordionSidebar {
+            background-color: #2f323e !important;
+            background-image: none !important;
+        }
+
+        #accordionSidebar .sidebar-heading.h-blue { color: #4e88ff !important; font-weight: 800 !important; font-size: 0.72rem !important; letter-spacing: 0.8px; }
+        #accordionSidebar .sidebar-heading.h-green { color: #2ecc71 !important; font-weight: 800 !important; font-size: 0.72rem !important; letter-spacing: 0.8px; }
+        #accordionSidebar .sidebar-heading.h-yellow { color: #f1b935 !important; font-weight: 800 !important; font-size: 0.72rem !important; letter-spacing: 0.8px; }
+        #accordionSidebar .sidebar-heading.h-red { color: #e74a3b !important; font-weight: 800 !important; font-size: 0.72rem !important; letter-spacing: 0.8px; }
+
+        #accordionSidebar .i-blue { color: #4e88ff !important; }
+        #accordionSidebar .i-green { color: #2ecc71 !important; }
+        #accordionSidebar .i-yellow { color: #f1b935 !important; }
+        #accordionSidebar .i-red { color: #e74a3b !important; }
+
+        #accordionSidebar .nav-item .nav-link {
+            color: #d1d5db !important;
+            font-size: 0.92rem;
+            padding: 0.75rem 1rem;
+        }
+        #accordionSidebar .nav-item .nav-link:hover {
+            color: #ffffff !important;
+            background-color: rgba(255, 255, 255, 0.05) !important;
+        }
+
+        /* BU SAYFA KOLEKSİYON & BİRİMLER ALTINDA (SARI TEMA): */
+        .brand-text-yellow {
+            color: #f1b935 !important;
+            font-weight: 900 !important;
+            letter-spacing: 1.5px;
+            font-size: 1.15rem;
+        }
+        .brand-icon-yellow {
+            color: #f1b935 !important;
+        }
+        #accordionSidebar .nav-item.active-yellow .nav-link {
+            color: #ffffff !important;
+            font-weight: bold !important;
+            background-color: rgba(241, 185, 53, 0.18) !important;
+            border-left: 4px solid #f1b935 !important;
+        }
+
+        .border-left-brick-yellow { border-left: .25rem solid #f1b935 !important; }
+        .text-brick-yellow { color: #f1b935 !important; }
+    </style>
+</head>
+
+<body id="page-top">
+
+    <div id="wrapper">
+
+        <!-- SIDEBAR -->
+        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Logo (Sarı Tema) -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center my-2" href="index.html">
+                <div class="sidebar-brand-icon rotate-n-15 mr-2">
+                    <i class="fas fa-cubes fa-2x brand-icon-yellow"></i>
+                </div>
+                <div class="sidebar-brand-text brand-text-yellow">BRICKMASTER</div>
+            </a>
+
+            <hr class="sidebar-divider my-1 border-secondary">
+
+            <!-- 1. VİTRİN & GİRİŞ -->
+            <div class="sidebar-heading h-blue mt-3">VİTRİN & GİRİŞ</div>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-home i-blue"></i>
+                    <span>Ana Sayfa</span>
+                </a>
+            </li>
+
+            <hr class="sidebar-divider my-2 border-secondary">
+
+            <!-- 2. KURUMSAL -->
+            <div class="sidebar-heading h-green">KURUMSAL</div>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">
+                    <i class="fas fa-fw fa-info-circle i-green"></i>
+                    <span>Hakkımızda</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="mission.html">
+                    <i class="fas fa-fw fa-bullseye i-green"></i>
+                    <span>Misyon & Vizyon</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">
+                    <i class="fas fa-fw fa-envelope i-green"></i>
+                    <span>İletişim & Harita</span>
+                </a>
+            </li>
+
+            <hr class="sidebar-divider my-2 border-secondary">
+
+            <!-- 3. KOLEKSİYON & BİRİMLER -->
+            <div class="sidebar-heading h-yellow">KOLEKSİYON & BİRİMLER</div>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProducts">
+                    <i class="fas fa-fw fa-boxes i-yellow"></i>
+                    <span>Ürünlerimiz</span>
+                </a>
+                <div id="collapseProducts" class="collapse" data-parent="#accordionSidebar">
+                    <div class="py-2 collapse-inner rounded bg-gray-900 border border-secondary">
+                        <h6 class="collapse-header text-warning font-weight-bold">Set Çeşitleri:</h6>
+                        <a class="collapse-item text-light" href="product-details.html">Koleksiyonluk Setler</a>
+                        <a class="collapse-item text-light" href="product-details.html">MOC Özel Tasarımlar</a>
+                        <a class="collapse-item text-light" href="product-details.html">Yedek Parçalar</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUnits">
+                    <i class="fas fa-fw fa-sitemap i-yellow"></i>
+                    <span>Birimlerimiz</span>
+                </a>
+                <div id="collapseUnits" class="collapse" data-parent="#accordionSidebar">
+                    <div class="py-2 collapse-inner rounded bg-gray-900 border border-secondary">
+                        <h6 class="collapse-header text-warning font-weight-bold">Birim Masaları:</h6>
+                        <a class="collapse-item text-light" href="#">Kılavuz Arşivi</a>
+                        <a class="collapse-item text-light" href="#">Lojistik & Ayıklama</a>
+                    </div>
+                </div>
+            </li>
+            <!-- AKTİF SEKME: EKSİK PARÇA MASASI -->
+            <li class="nav-item active-yellow">
+                <a class="nav-link" href="missing-part.html">
+                    <i class="fas fa-fw fa-puzzle-piece i-yellow"></i>
+                    <span>Eksik Parça Masası</span>
+                </a>
+            </li>
+
+            <hr class="sidebar-divider my-2 border-secondary">
+
+            <!-- 4. VERİLER & YÖNETİM -->
+            <div class="sidebar-heading h-red">VERİLER & YÖNETİM</div>
+            <li class="nav-item">
+                <a class="nav-link" href="charts.html">
+                    <i class="fas fa-fw fa-chart-pie i-red"></i>
+                    <span>Rakamlarla BrickMaster</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="announcements.html">
+                    <i class="fas fa-fw fa-bullhorn i-red"></i>
+                    <span>Duyuru Arşivi</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="admin.html">
+                    <i class="fas fa-fw fa-user-shield i-red"></i>
+                    <span>Yönetim Paneli</span>
+                </a>
+            </li>
+
+            <hr class="sidebar-divider d-none d-md-block my-3 border-secondary">
+
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+        </ul>
+        <!-- SIDEBAR BİTİŞ -->
+
+        <!-- İÇERİK ALANI -->
+        <div id="content-wrapper" class="d-flex flex-column bg-light">
+
+            <div id="content">
+
+                <!-- TOPBAR -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow-sm">
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3 text-warning">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <h5 class="m-0 font-weight-bold text-gray-800 d-none d-sm-inline-block">
+                        <i class="fas fa-puzzle-piece text-warning mr-2"></i>BrickMaster Teknik Eksik Parça Otomasyonu
+                    </h5>
+
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <span class="text-gray-600 small font-weight-bold">
+                                KOÜ Bilişim Sistemleri Müh. | TBL303
+                            </span>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- SAYFA İÇERİĞİ -->
+                <div class="container-fluid">
+
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <div>
+                            <h1 class="h3 mb-0 text-gray-800 font-weight-bold">Eksik / Kusurlu Parça Masası</h1>
+                            <p class="text-muted small mb-0">Setinizden eksik çıkan tuğlaları kılavuz kodları ile bildirerek ücretsiz temin edin.</p>
+                        </div>
+                        <a href="index.html" class="btn btn-sm btn-warning text-dark shadow-sm font-weight-bold">
+                            <i class="fas fa-arrow-left fa-sm mr-1"></i> Vitrine Geri Dön
+                        </a>
+                    </div>
+
+                    <!-- BİLGİ KUTUSU -->
+                    <div class="alert alert-warning border-left-brick-yellow shadow-sm mb-4" role="alert">
+                        <i class="fas fa-shield-alt mr-2"></i>
+                        <strong>%100 Orijinal Parça Garantisi:</strong> Kılavuzun son sayfasında yer alan 7 haneli Element ID kodunu girmeniz durumunda, eksik parçanız doğrudan stoklarımızdan ayrılır ve <strong>3 iş günü içinde ücretsiz kargo</strong> ile adresinize gönderilir.
+                    </div>
+
+                    <!-- FORM VE YARDIM KILAVUZU -->
+                    <div class="row">
+                        <!-- Sol Kolon: Özel Teknik Form -->
+                        <div class="col-lg-8 mb-4">
+                            <div class="card shadow-sm border-left-brick-yellow">
+                                <div class="card-header py-3 bg-white">
+                                    <h6 class="m-0 font-weight-bold text-dark">
+                                        <i class="fas fa-clipboard-list text-warning mr-2"></i>Teknik Parça Bildirim Formu
+                                    </h6>
+                                </div>
+                                <div class="card-body">
+
+                                    <div id="missingPartSuccess" class="alert alert-success d-none alert-dismissible fade show" role="alert">
+                                        <i class="fas fa-check-circle mr-2"></i><strong>Talebiniz Alındı!</strong> Parça envanterde rezerve edilmiştir. Kargo takip kodunuz e-posta adresinize gönderilecektir.
+                                        <button type="button" class="close" data-dismiss="alert"><span>&times;</span></button>
+                                    </div>
+
+                                    <form id="missingPartForm">
+                                        <!-- 1. Grup: Set ve Model Bilgileri -->
+                                        <div class="form-row bg-light p-3 rounded border mb-3">
+                                            <div class="col-12 mb-2">
+                                                <span class="small font-weight-bold text-warning d-block">
+                                                    <i class="fas fa-box-open mr-1"></i>1. Set Bilgileri
+                                                </span>
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label for="pSetNo" class="small font-weight-bold text-gray-700">Set Kodu <span class="text-danger">*</span></label>
+                                                <input type="text" class="form-control form-control-sm" id="pSetNo" placeholder="Örn: 42115" required>
+                                            </div>
+                                            <div class="form-group col-md-5">
+                                                <label for="pSetName" class="small font-weight-bold text-gray-700">Set İsmi <span class="text-danger">*</span></label>
+                                                <input type="text" class="form-control form-control-sm" id="pSetName" placeholder="Örn: Lamborghini Sián FKP 37" required>
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <label for="pBagNo" class="small font-weight-bold text-gray-700">Hangi Torba? <span class="text-danger">*</span></label>
+                                                <input type="text" class="form-control form-control-sm" id="pBagNo" placeholder="Örn: Torba 3 (veya Torba 1)" required>
+                                            </div>
+                                        </div>
+
+                                        <!-- 2. Grup: Parça Detayları -->
+                                        <div class="form-row bg-light p-3 rounded border mb-3">
+                                            <div class="col-12 mb-2">
+                                                <span class="small font-weight-bold text-warning d-block">
+                                                    <i class="fas fa-cubes mr-1"></i>2. Eksik Tuğla / Parça Tanımı
+                                                </span>
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label for="pElementId" class="small font-weight-bold text-gray-700">Parça / Element ID <span class="text-danger">*</span></label>
+                                                <input type="text" class="form-control form-control-sm" id="pElementId" placeholder="Örn: 6271165" required>
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label for="pColor" class="small font-weight-bold text-gray-700">Parça Rengi</label>
+                                                <input type="text" class="form-control form-control-sm" id="pColor" placeholder="Örn: Lime Yeşili / Koyu Gri">
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label for="pQuantity" class="small font-weight-bold text-gray-700">Eksik Adet</label>
+                                                <input type="number" class="form-control form-control-sm" id="pQuantity" value="1" min="1" max="10">
+                                            </div>
+                                            <div class="form-group col-12 mb-0">
+                                                <label for="pManualStep" class="small font-weight-bold text-gray-700">Montaj Kılavuzundaki Adım No & Açıklama</label>
+                                                <textarea class="form-control form-control-sm" id="pManualStep" rows="2" placeholder="Örn: Kılavuz Sayfa 48, Adım 112'de takılması gereken dişli eksik çıktı."></textarea>
+                                            </div>
+                                        </div>
+
+                                        <!-- 3. Grup: İletişim & Kargo Adresi -->
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label for="uName" class="small font-weight-bold">Ad Soyad <span class="text-danger">*</span></label>
+                                                <input type="text" class="form-control form-control-sm" id="uName" placeholder="Adınız Soyadınız" required>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="uEmail" class="small font-weight-bold">E-Posta Adresi <span class="text-danger">*</span></label>
+                                                <input type="email" class="form-control form-control-sm" id="uEmail" placeholder="adiniz@alanadi.com" required>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="uPhone" class="small font-weight-bold">Telefon Numarası <span class="text-danger">*</span></label>
+                                                <input type="tel" class="form-control form-control-sm" id="uPhone" placeholder="05XX XXX XX XX" required>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="uFile" class="small font-weight-bold">Varsa Kılavuz Sayfası Görseli</label>
+                                                <input type="file" class="form-control-file small" id="uFile" accept="image/*,.pdf">
+                                            </div>
+                                            <div class="form-group col-12">
+                                                <label for="uAddress" class="small font-weight-bold">Kargonun Gönderileceği Teslimat Adresi <span class="text-danger">*</span></label>
+                                                <textarea class="form-control form-control-sm" id="uAddress" rows="2" placeholder="Mahalle, Cadde, Sokak, Daire, İlçe / İl" required></textarea>
+                                            </div>
+                                        </div>
+
+                                        <button type="submit" class="btn btn-warning btn-block font-weight-bold text-dark shadow-sm py-2">
+                                            <i class="fas fa-paper-plane mr-2"></i>Eksik Parça Talebini Depoya İlet
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sağ Kolon: Rehber Kartları -->
+                        <div class="col-lg-4 mb-4">
+                            <div class="card shadow-sm mb-4">
+                                <div class="card-header py-3 bg-white">
+                                    <h6 class="m-0 font-weight-bold text-warning">
+                                        <i class="fas fa-search mr-2"></i>Element ID Nerede Yazar?
+                                    </h6>
+                                </div>
+                                <div class="card-body small text-gray-700">
+                                    <p>Resmi LEGO veya MOC montaj kılavuzlarının en arka sayfalarında tüm parçaların parça numarası (Element ID) listelenir.</p>
+                                    <div class="p-2 bg-light rounded border text-center mb-2">
+                                        <i class="fas fa-barcode fa-2x text-muted mb-1 d-block"></i>
+                                        <span class="font-weight-bold text-dark">Örnek: 6271165</span>
+                                    </div>
+                                    <p class="mb-0">Bu kodu yazdığınızda stoklarımızdan doğru renk ve boyuttaki orijinal parça eşleştirilir.</p>
+                                </div>
+                            </div>
+
+                            <div class="card shadow-sm border-left-brick-yellow">
+                                <div class="card-body small text-gray-700">
+                                    <h6 class="font-weight-bold text-dark mb-2"><i class="fas fa-truck text-warning mr-1"></i> Teslimat Süreci</h6>
+                                    <ul class="pl-3 mb-0">
+                                        <li>Talep onayından sonra 24 saatte hazırlanır.</li>
+                                        <li>MNG / Yurtiçi Kargo ile karşı ödemesiz (ücretsiz) yola çıkar.</li>
+                                        <li>Kargo takip kodu SMS ve e-posta ile bildirilir.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white shadow-sm mt-4">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span class="text-gray-700 font-weight-bold">
+                            BrickMaster Studio & Store &copy; 2026 | Kocaeli Üniversitesi Bilişim Sistemleri Mühendisliği TBL303
+                        </span>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+    <!-- JS Kütüphaneleri -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#missingPartForm').on('submit', function(e) {
+                e.preventDefault();
+                $('#missingPartSuccess').removeClass('d-none');
+                this.reset();
+                $('html, body').animate({
+                    scrollTop: $("#missingPartSuccess").offset().top - 80
+                }, 400);
+            });
+        });
+    </script>
+</body>
+</html>
