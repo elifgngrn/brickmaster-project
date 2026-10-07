@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="BrickMaster Studio & Store - Misyon & Vizyon">
+    <meta name="author" content="KOÜ Bilişim Sistemleri Mühendisliği">
+
+    <title>BrickMaster - Misyon & Vizyon</title>
+
+    <!-- FontAwesome & Google Fonts -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900" rel="stylesheet">
+
+    <!-- SB Admin 2 Orijinal CSS -->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+    <style>
+        /* Sol Menü: Koyu Antrasit Zemin */
+        #accordionSidebar.sidebar-brickmaster {
+            background-color: #2f323e !important;
+            background-image: none !important;
+        }
+
+        /* Kurumsal Kategori Sayfalarında Logo: YEŞİL */
+        .sidebar-brand .brand-text-green {
+            color: #2ecc71 !important;
+            font-weight: 900 !important;
+            letter-spacing: 1.5px;
+            font-size: 1.1rem;
+        }
+        .sidebar-brand .brand-icon-green {
+            color: #2ecc71 !important;
+        }
+
+        /* Menü Başlık Renkleri */
+        #accordionSidebar .sidebar-heading.h-blue { color: #4e88ff !important; font-weight: 800 !important; font-size: 0.72rem !important; letter-spacing: 0.8px; }
+        #accordionSidebar .sidebar-heading.h-green { color: #2ecc71 !important; font-weight: 800 !important; font-size: 0.72rem !important; letter-spacing: 0.8px; }
+        #accordionSidebar .sidebar-heading.h-yellow { color: #f1b935 !important; font-weight: 800 !important; font-size: 0.72rem !important; letter-spacing: 0.8px; }
+        #accordionSidebar .sidebar-heading.h-red { color: #e74a3b !important; font-weight: 800 !important; font-size: 0.72rem !important; letter-spacing: 0.8px; }
+
+        /* Menü İkon Renkleri */
+        #accordionSidebar .i-blue { color: #4e88ff !important; }
+        #accordionSidebar .i-green { color: #2ecc71 !important; }
+        #accordionSidebar .i-yellow { color: #f1b935 !important; }
+        #accordionSidebar .i-red { color: #e74a3b !important; }
+
+        /* Menü Linkleri & Aktif Sekme (Yeşil) */
+        #accordionSidebar .nav-item .nav-link {
+            color: #d1d5db !important;
+            font-size: 0.92rem;
+            padding: 0.75rem 1rem;
+        }
+        #accordionSidebar .nav-item .nav-link:hover {
+            color: #ffffff !important;
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+        #accordionSidebar .nav-item.active-green .nav-link {
+            color: #ffffff !important;
+            font-weight: bold !important;
+            background-color: rgba(46, 204, 113, 0.18) !important;
+            border-left: 4px solid #2ecc71 !important;
+        }
+
+        /* Sayfa İçi Vurgular */
+        .text-brick-green { color: #2ecc71 !important; }
+        .border-left-brick-green { border-left: .25rem solid #2ecc71 !important; }
+        .border-left-brick-blue { border-left: .25rem solid #4e88ff !important; }
+        .border-left-brick-yellow { border-left: .25rem solid #f1b935 !important; }
+        .border-left-brick-red { border-left: .25rem solid #e74a3b !important; }
+
+        .mission-icon {
+            font-size: 2.2rem;
+            color: #2ecc71;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body id="page-top">
+
+    <div id="wrapper">
+
+        <!-- SIDEBAR -->
+        <ul class="navbar-nav sidebar sidebar-dark sidebar-brickmaster accordion" id="accordionSidebar">
+
+            <!-- Logo (Kurumsal Sayfalar İçin Yeşil) -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center my-2" href="index.html">
+                <div class="sidebar-brand-icon rotate-n-15 mr-2">
+                    <i class="fas fa-cubes fa-2x brand-icon-green"></i>
+                </div>
+                <div class="sidebar-brand-text brand-text-green">BRICKMASTER</div>
+            </a>
+
+            <hr class="sidebar-divider my-1 border-secondary">
+
+            <!-- 1. VİTRİN & GİRİŞ (MAVİ) -->
+            <div class="sidebar-heading h-blue mt-3">VİTRİN & GİRİŞ</div>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-home i-blue"></i>
+                    <span>Ana Sayfa</span>
+                </a>
+            </li>
+
+            <hr class="sidebar-divider my-2 border-secondary">
+
+            <!-- 2. KURUMSAL (YEŞİL) -->
+            <div class="sidebar-heading h-green">KURUMSAL</div>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">
+                    <i class="fas fa-fw fa-info-circle i-green"></i>
+                    <span>Hakkımızda</span>
+                </a>
+            </li>
+            <!-- Aktif Sekme: Misyon & Vizyon -->
+            <li class="nav-item active-green">
+                <a class="nav-link" href="mission.html">
+                    <i class="fas fa-fw fa-bullseye i-green"></i>
+                    <span>Misyon & Vizyon</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">
+                    <i class="fas fa-fw fa-envelope i-green"></i>
+                    <span>İletişim & Eksik Parça</span>
+                </a>
+            </li>
+
+            <hr class="sidebar-divider my-2 border-secondary">
+
+            <!-- 3. KOLEKSİYON & BİRİMLER (SARI) -->
+            <div class="sidebar-heading h-yellow">KOLEKSİYON & BİRİMLER</div>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProducts">
+                    <i class="fas fa-fw fa-boxes i-yellow"></i>
+                    <span>Ürünlerimiz</span>
+                </a>
+                <div id="collapseProducts" class="collapse" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header text-warning font-weight-bold">Set Çeşitleri:</h6>
+                        <a class="collapse-item" href="product-details.html">Koleksiyonluk Setler</a>
+                        <a class="collapse-item" href="product-details.html">MOC Özel Tasarımlar</a>
+                        <a class="collapse-item" href="product-details.html">Yedek Parçalar</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUnits">
+                    <i class="fas fa-fw fa-sitemap i-yellow"></i>
+                    <span>Birimlerimiz</span>
+                </a>
+                <div id="collapseUnits" class="collapse" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header text-warning font-weight-bold">Birim Masaları:</h6>
+                        <a class="collapse-item" href="#">Kılavuz Arşivi</a>
+                        <a class="collapse-item" href="contact.html">Kayıp Parça Masası</a>
+                        <a class="collapse-item" href="#">Lojistik & Ayıklama</a>
+                    </div>
+                </div>
+            </li>
+
+            <hr class="sidebar-divider my-2 border-secondary">
+
+            <!-- 4. VERİLER & YÖNETİM (KIRMIZI) -->
+            <div class="sidebar-heading h-red">VERİLER & YÖNETİM</div>
+            <li class="nav-item">
+                <a class="nav-link" href="charts.html">
+                    <i class="fas fa-fw fa-chart-pie i-red"></i>
+                    <span>Rakamlarla BrickMaster</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="announcements.html">
+                    <i class="fas fa-fw fa-bullhorn i-red"></i>
+                    <span>Duyuru Arşivi</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="admin.html">
+                    <i class="fas fa-fw fa-user-shield i-red"></i>
+                    <span>Yönetim Paneli</span>
+                </a>
+            </li>
+
+            <hr class="sidebar-divider d-none d-md-block my-3 border-secondary">
+
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+        </ul>
+        <!-- SIDEBAR BİTİŞ -->
+
+        <!-- İÇERİK ALANI -->
+        <div id="content-wrapper" class="d-flex flex-column bg-light">
+
+            <div id="content">
+
+                <!-- TOPBAR -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow-sm">
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3 text-success">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <h5 class="m-0 font-weight-bold text-gray-800 d-none d-sm-inline-block">
+                        <i class="fas fa-bullseye text-brick-green mr-2"></i>BrickMaster Gelecek Vizyonu & İlkeler
+                    </h5>
+
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <span class="text-gray-600 small font-weight-bold">
+                                KOÜ Bilişim Sistemleri Müh. | TBL303
+                            </span>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- SAYFA İÇERİĞİ -->
+                <div class="container-fluid">
+
+                    <!-- Başlık & Vitrin Butonu -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <div>
+                            <h1 class="h3 mb-0 text-gray-800 font-weight-bold">Misyon & Vizyon</h1>
+                            <p class="text-muted small mb-0">BrickMaster'ın temel varoluş amacı, uzun vadeli hedefleri ve vazgeçilmez değerleri.</p>
+                        </div>
+                        <a href="index.html" class="btn btn-sm btn-success shadow-sm font-weight-bold">
+                            <i class="fas fa-arrow-left fa-sm mr-1"></i> Vitrine Geri Dön
+                        </a>
+                    </div>
+
+                    <!-- 1. KISIM: MİSYON & VİZYON KARTLARI -->
+                    <div class="row mb-4">
+                        <!-- Misyon -->
+                        <div class="col-lg-6 mb-4 mb-lg-0">
+                            <div class="card shadow-sm border-left-brick-green h-100">
+                                <div class="card-body p-4">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="mr-3">
+                                            <i class="fas fa-compass fa-2x text-brick-green"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-weight-bold text-gray-800 mb-0">Misyonumuz</h4>
+                                            <small class="text-success font-weight-bold">Varoluş Amacımız & Üretim Felsefemiz</small>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-700 lead font-weight-normal mb-3">
+                                        LEGO modelleme sanatını salt bir hobi olmaktan çıkarıp mühendislik algoritmaları, mekanik sistemler ve özgün tasarım kültürüyle harmanlamak.
+                                    </p>
+                                    <p class="text-gray-600 small mb-0">
+                                        Kullanıcılarımıza sıfır eksik parça garantisi, anlaşılır dijital montaj kılavuzları ve numaralandırılmış torba standartlarıyla birinci sınıf bir yapım deneyimi sunuyoruz. Her yaştan yapımcıya sabır, odaklanma ve üç boyutlu düşünme yetisi kazandırmayı hedefliyoruz.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Vizyon -->
+                        <div class="col-lg-6">
+                            <div class="card shadow-sm border-left-brick-blue h-100">
+                                <div class="card-body p-4">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="mr-3">
+                                            <i class="fas fa-eye fa-2x text-primary"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-weight-bold text-gray-800 mb-0">Vizyonumuz</h4>
+                                            <small class="text-primary font-weight-bold">Gelecek Hedefimiz & Ekosistem Planı</small>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-700 lead font-weight-normal mb-3">
+                                        Türkiye'nin ve bölgenin en büyük bağımsız MOC (My Own Creation) tasarım merkezi ve dijital kılavuz arşivi haline gelmek.
+                                    </p>
+                                    <p class="text-gray-600 small mb-0">
+                                        Kendi geliştirdiğimiz modelleme standartlarını global topluluklarla buluşturarak, üniversite-sanayi iş birliği vizyonuyla robotik ve STEM odaklı tuğla atölyelerinde öncü referans noktası olmayı amaçlıyoruz.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. KISIM: 4 TEMEL DEĞERİMİZ -->
+                    <div class="row mb-4">
+                        <div class="col-12 mb-3">
+                            <h5 class="font-weight-bold text-gray-800">
+                                <i class="fas fa-gem text-brick-green mr-2"></i>Temel Değerlerimiz
+                            </h5>
+                        </div>
+
+                        <div class="col-md-3 mb-3">
+                            <div class="card shadow-sm h-100 border-0 bg-white">
+                                <div class="card-body text-center p-4">
+                                    <i class="fas fa-check-double mission-icon text-success"></i>
+                                    <h6 class="font-weight-bold text-gray-800 mb-2">%100 Orijinallik</h6>
+                                    <p class="text-muted small mb-0">
+                                        Asla klon veya replika parça kullanmayız. Envanterimizdeki tüm parçalar sertifikalı orijinal tuğlalardan oluşur.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 mb-3">
+                            <div class="card shadow-sm h-100 border-0 bg-white">
+                                <div class="card-body text-center p-4">
+                                    <i class="fas fa-cogs mission-icon text-primary"></i>
+                                    <h6 class="font-weight-bold text-gray-800 mb-2">Mühendislik Titizliği</h6>
+                                    <p class="text-muted small mb-0">
+                                        Modellerimiz önce CAD ortamında test edilir; dişli oranları, ağırlık dengesi ve dayanıklılık hesaplanır.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 mb-3">
+                            <div class="card shadow-sm h-100 border-0 bg-white">
+                                <div class="card-body text-center p-4">
+                                    <i class="fas fa-users mission-icon text-warning"></i>
+                                    <h6 class="font-weight-bold text-gray-800 mb-2">Topluluk & Paylaşım</h6>
+                                    <p class="text-muted small mb-0">
+                                        Açık kaynak MOC kılavuzlarıyla topluluk projelerini destekler, genç tasarımcılara mentorluk sağlarız.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 mb-3">
+                            <div class="card shadow-sm h-100 border-0 bg-white">
+                                <div class="card-body text-center p-4">
+                                    <i class="fas fa-recycle mission-icon text-danger"></i>
+                                    <h6 class="font-weight-bold text-gray-800 mb-2">Sıfır Parça İsrafı</h6>
+                                    <p class="text-muted small mb-0">
+                                        Geri dönüştürülmüş ve ikinci el temiz tuğlaları ayıklayıp yeniden hayata kazandırarak çevreye duyarlı döngü kurarız.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. KISIM: 2026-2027 STRATEJİK HEDEFLERİ (PROGRESS BARS) -->
+                    <div class="row">
+                        <div class="col-12 mb-4">
+                            <div class="card shadow-sm">
+                                <div class="card-header py-3 bg-white">
+                                    <h6 class="m-0 font-weight-bold text-brick-green">
+                                        <i class="fas fa-tasks mr-2"></i>2026 - 2027 Stratejik Hedeflerimiz & İlerleme Durumu
+                                    </h6>
+                                </div>
+                                <div class="card-body">
+                                    
+                                    <h6 class="small font-weight-bold text-gray-700">
+                                        Dijital Kılavuz Arşivi Büyütme (Hedef: 2.000 PDF Kılavuz)
+                                        <span class="float-right text-success font-weight-bold">%75 (1.450 / 2.000)</span>
+                                    </h6>
+                                    <div class="progress mb-4" style="height: 12px;">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+
+                                    <h6 class="small font-weight-bold text-gray-700">
+                                        Özel MOC Proje Portföyü (Hedef: 150 Özgün Model)
+                                        <span class="float-right text-primary font-weight-bold">%80 (120 / 150)</span>
+                                    </h6>
+                                    <div class="progress mb-4" style="height: 12px;">
+                                        <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+
+                                    <h6 class="small font-weight-bold text-gray-700">
+                                        Kayıp Parça Masası 24 Saat İçinde Gönderim Oranı
+                                        <span class="float-right text-warning font-weight-bold">%94</span>
+                                    </h6>
+                                    <div class="progress mb-4" style="height: 12px;">
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 94%" aria-valuenow="94" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+
+                                    <h6 class="small font-weight-bold text-gray-700">
+                                        KOÜ Yerleşkesi Öğrenci Atölye Katılımı (Hedef: 500 Öğrenci)
+                                        <span class="float-right text-danger font-weight-bold">%65 (325 / 500)</span>
+                                    </h6>
+                                    <div class="progress mb-0" style="height: 12px;">
+                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white shadow-sm mt-4">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span class="text-gray-700 font-weight-bold">
+                            BrickMaster Studio & Store &copy; 2026 | Kocaeli Üniversitesi Bilişim Sistemleri Mühendisliği TBL303
+                        </span>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+    <!-- JS Kütüphaneleri -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="js/sb-admin-2.min.js"></script>
+
+</body>
+</html>
