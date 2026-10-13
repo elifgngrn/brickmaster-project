@@ -25,7 +25,7 @@
             background-image: none !important;
         }
 
-        /* 2. KATEGORİ BAŞLIKLARI (SB-ADMIN MAVİSİNİ KESİN EZEN RENKLER) */
+        /* 2. KATEGORİ BAŞLIKLARI */
         #accordionSidebar .sidebar-heading.h-blue { color: #4e88ff !important; font-weight: 800 !important; font-size: 0.72rem !important; letter-spacing: 0.8px; }
         #accordionSidebar .sidebar-heading.h-green { color: #2ecc71 !important; font-weight: 800 !important; font-size: 0.72rem !important; letter-spacing: 0.8px; }
         #accordionSidebar .sidebar-heading.h-yellow { color: #f1b935 !important; font-weight: 800 !important; font-size: 0.72rem !important; letter-spacing: 0.8px; }
@@ -48,7 +48,7 @@
             background-color: rgba(255, 255, 255, 0.05) !important;
         }
 
-        /* 5. "ÜRÜNLERİMİZ" & "BİRİMLERİMİZ" MAVİYE DÖNME ENGELLEYİCİ */
+        /* 5. AÇILIR MENÜ (SARI VURGU, MAVİ ENGELLEYİCİ) */
         #accordionSidebar .nav-item .nav-link[data-toggle="collapse"]:not(.collapsed),
         #accordionSidebar .nav-item .nav-link[data-toggle="collapse"]:hover,
         #accordionSidebar .nav-item .nav-link[data-toggle="collapse"]:focus {
@@ -77,7 +77,7 @@
             font-weight: bold !important;
         }
 
-        /* BU SAYFA KOLEKSİYON & BİRİMLER OLDUĞU İÇİN (SARI TEMA) */
+        /* SARI LOGO & TEMA */
         .brand-text-yellow {
             color: #f1b935 !important;
             font-weight: 900 !important;
@@ -94,7 +94,7 @@
 
     <div id="wrapper">
 
-        <!-- SIDEBAR -->
+      <!-- KENAR ÇUBUĞU (SIDEBAR) -->
         <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Logo (Sarı Tema) -->
@@ -142,22 +142,25 @@
             <hr class="sidebar-divider my-2 border-secondary">
 
             <!-- 3. KOLEKSİYON & BİRİMLER (SARI) -->
+     <!-- 3. KOLEKSİYON & BİRİMLER (SARI) -->
             <div class="sidebar-heading h-yellow">KOLEKSİYON & BİRİMLER</div>
+            
+            <!-- Ürünlerimiz Açılır Menüsü (Doğrudan Açık ve Esnek Panel) -->
             <li class="nav-item">
-                <!-- Sayfa açıldığında açık durması için 'collapsed' sınıfı yok ve aria-expanded='true' -->
-                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseProducts" aria-expanded="true">
+                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseProducts" aria-expanded="true" aria-controls="collapseProducts">
                     <i class="fas fa-fw fa-boxes i-yellow"></i>
                     <span>Ürünlerimiz</span>
                 </a>
-                <div id="collapseProducts" class="collapse show" data-parent="#accordionSidebar">
-                    <div class="py-2 collapse-inner rounded">
-                        <h6 class="collapse-header text-warning font-weight-bold">Set Çeşitleri:</h6>
-                        <a class="collapse-item active" href="product-details.html">Koleksiyonluk Setler</a>
-                        <a class="collapse-item" href="product-details.html">MOC Özel Tasarımlar</a>
-                        <a class="collapse-item" href="product-details.html">Yedek Parçalar</a>
+                <div id="collapseProducts" class="collapse show" data-parent="#accordionSidebar" style="height: auto !important;">
+                    <div class="py-2 collapse-inner rounded" style="background-color: #242631 !important; border: 1px solid #3c4052 !important;">
+                        <h6 class="collapse-header text-warning font-weight-bold" style="font-size: 0.75rem; letter-spacing: 0.5px;">SET MODELLERİ:</h6>
+                        <a class="collapse-item active font-weight-bold text-warning" href="product-details.html">Ferrari Daytona SP3</a>
+                        <a class="collapse-item" href="product-castle.html">MOC Orta Çağ Kalesi</a>
+                        <a class="collapse-item" href="product-falcon.html">UCS Millennium Falcon</a>
                     </div>
                 </div>
             </li>
+
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUnits">
                     <i class="fas fa-fw fa-sitemap i-yellow"></i>
@@ -171,13 +174,13 @@
                     </div>
                 </div>
             </li>
+
             <li class="nav-item">
                 <a class="nav-link" href="missing-part.html">
                     <i class="fas fa-fw fa-puzzle-piece i-yellow"></i>
                     <span>Eksik Parça Masası</span>
                 </a>
             </li>
-
             <hr class="sidebar-divider my-2 border-secondary">
 
             <!-- 4. VERİLER & YÖNETİM (KIRMIZI) -->
@@ -241,30 +244,37 @@
                         <ol class="breadcrumb bg-white shadow-sm small">
                             <li class="breadcrumb-item"><a href="index.html" class="text-primary font-weight-bold">Ana Sayfa</a></li>
                             <li class="breadcrumb-item text-muted">Ürünlerimiz</li>
-                            <li class="breadcrumb-item active text-dark font-weight-bold" aria-current="page">LEGO Technic 1:8 Hypercar</li>
+                            <li class="breadcrumb-item active text-dark font-weight-bold" aria-current="page">Ferrari Daytona SP3 (1:8)</li>
                         </ol>
                     </nav>
 
-                    <!-- Ürün Başlığı & Fiyat Kartı -->
+                    <!-- ÜRÜN DETAY SATIRI (SOL VE SAĞ YAN YANA) -->
                     <div class="row mb-4">
-                        <div class="col-lg-7">
-                            <div class="card shadow-sm border-0 mb-4">
-                                <img src="https://images.unsplash.com/photo-1585366119957-e9730b6d0f60?auto=format&fit=crop&w=1000&q=80" class="card-img-top rounded" alt="Technic Hypercar">
-                                <div class="card-body">
+
+                        <!-- SOL KOLON: ÜRÜN GÖRSELİ VE AÇIKLAMASI -->
+                        <div class="col-lg-7 mb-4">
+                            <div class="card shadow-sm border-0 bg-white p-3 text-center h-100">
+                                
+                                <!-- Ana Ürün Görseli -->
+                                <div class="p-2 d-flex align-items-center justify-content-center" style="min-height: 320px; background-color: #ffffff;">
+                                    <img id="mainProductImg" src="./img/ferraridaytona.jpeg" class="img-fluid rounded" alt="Ferrari Daytona SP3" style="max-height: 300px; object-fit: contain;">
+                                </div>
+                                
+                                <div class="card-body text-left px-2 pb-0 pt-3">
                                     <div class="d-flex justify-content-between align-items-center mb-2">
                                         <span class="badge badge-warning text-dark px-3 py-1 font-weight-bold">Koleksiyonluk Özel Seri</span>
                                         <span class="text-muted small">Ürün Kodu: <strong>#TK-42115</strong></span>
                                     </div>
                                     <h3 class="font-weight-bold text-gray-800">Ferrari Daytona SP3 & Hypercar (1:8 Ölçek)</h3>
                                     <p class="text-gray-600">
-                                        3.778 parçadan oluşan bu efsanevi model; çalışan 8 ileri vites kutusu, direksiyonla dönen ön tekerlekler, V12 piston motor ve kelebek kapı mekanizmasıyla mühendislik harikası bir deneyim sunar.
+                                        3.778 parçadan oluşan bu efsanevi model; çalışan 8 ileri vites kutusu, direksiyonla dönen ön tekerlekler, V12 piston motor ve kelebek kapı mekanizmasıyla benzersiz bir mühendislik deneyimi sunar.
                                     </p>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Sağ Taraf: Fiyat, Özellikler & PDF Kılavuz -->
-                        <div class="col-lg-5">
+                        <!-- SAĞ KOLON: FİYAT, BUTONLAR VE EKSİK PARÇA BİLGİSİ -->
+                        <div class="col-lg-5 mb-4">
                             <div class="card shadow-sm border-left-warning mb-4">
                                 <div class="card-body">
                                     <h6 class="text-xs font-weight-bold text-warning text-uppercase mb-1">Satış Fiyatı & Teslimat</h6>
@@ -299,7 +309,7 @@
                                 </div>
                             </div>
 
-                            <!-- Eksik Parça Destek Kutusu -->
+                            <!-- Eksik Parça Destek Kartı -->
                             <div class="card shadow-sm border-0 bg-white">
                                 <div class="card-body small text-gray-700">
                                     <h6 class="font-weight-bold text-dark mb-1"><i class="fas fa-puzzle-piece text-warning mr-1"></i> Parçanız mı Eksik?</h6>
@@ -310,6 +320,7 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
 
                     <!-- 2. KISIM: ADIM ADIM TORBA MONTAJ AŞAMALARI (BOOTSTRAP TABS) -->
@@ -363,7 +374,7 @@
                 </div>
             </div>
 
-            <!-- Footer -->
+            <!-- FOOTER (TAM ALTA SABİTLENDİ) -->
             <footer class="sticky-footer bg-white shadow-sm mt-4">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">

@@ -5,39 +5,39 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="BrickMaster Studio & Store - Rakamlarla BrickMaster">
+    <meta name="description" content="BrickMaster Studio & Store - Rakamlarla BrickMaster İstatistikleri">
     <meta name="author" content="KOÜ Bilişim Sistemleri Mühendisliği">
 
-    <title>BrickMaster - Rakamlarla İstatistikler</title>
+    <title>BrickMaster - Rakamlarla BrickMaster</title>
 
     <!-- FontAwesome & Google Fonts -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900" rel="stylesheet">
 
-    <!-- SB Admin 2 Orijinal CSS -->
+    <!-- SB Admin 2 CSS -->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
     <style>
-        /* 1. SABİT ANTRASİT MENÜ BARI */
+        /* Sabit Koyu Antrasit Sol Menü */
         #accordionSidebar {
             background-color: #2f323e !important;
             background-image: none !important;
         }
 
-        /* 2. KATEGORİ BAŞLIKLARI (SB-ADMIN MAVİSİNİ KESİN EZEN RENKLER) */
+        /* Kategori Başlık Renkleri */
         #accordionSidebar .sidebar-heading.h-blue { color: #4e88ff !important; font-weight: 800 !important; font-size: 0.72rem !important; letter-spacing: 0.8px; }
         #accordionSidebar .sidebar-heading.h-green { color: #2ecc71 !important; font-weight: 800 !important; font-size: 0.72rem !important; letter-spacing: 0.8px; }
         #accordionSidebar .sidebar-heading.h-yellow { color: #f1b935 !important; font-weight: 800 !important; font-size: 0.72rem !important; letter-spacing: 0.8px; }
         #accordionSidebar .sidebar-heading.h-red { color: #e74a3b !important; font-weight: 800 !important; font-size: 0.72rem !important; letter-spacing: 0.8px; }
 
-        /* 3. KATEGORİ İKONLARI */
+        /* Kategori İkon Renkleri */
         #accordionSidebar .i-blue { color: #4e88ff !important; }
         #accordionSidebar .i-green { color: #2ecc71 !important; }
         #accordionSidebar .i-yellow { color: #f1b935 !important; }
         #accordionSidebar .i-red { color: #e74a3b !important; }
 
-        /* 4. MENÜ LİNKLERİ (STANDART METİN) */
+        /* Menü Bağlantıları */
         #accordionSidebar .nav-item .nav-link {
             color: #d1d5db !important;
             font-size: 0.92rem;
@@ -48,36 +48,21 @@
             background-color: rgba(255, 255, 255, 0.05) !important;
         }
 
-        /* 5. "ÜRÜNLERİMİZ" & "BİRİMLERİMİZ" MAVİYE DÖNME ENGELLEYİCİ */
-        #accordionSidebar .nav-item .nav-link[data-toggle="collapse"]:not(.collapsed),
-        #accordionSidebar .nav-item .nav-link[data-toggle="collapse"]:hover,
-        #accordionSidebar .nav-item .nav-link[data-toggle="collapse"]:focus {
-            color: #f1b935 !important;
-            background-color: rgba(241, 185, 53, 0.12) !important;
-        }
-
-        #accordionSidebar .nav-item .nav-link[data-toggle="collapse"]::after {
-            color: #f1b935 !important;
-        }
-
+        /* Açılır Menü İçliği */
         #accordionSidebar .collapse-inner {
             background-color: #242631 !important;
             border: 1px solid #3c4052 !important;
         }
-
         #accordionSidebar .collapse-item {
             color: #d1d5db !important;
             font-size: 0.85rem !important;
         }
-
-        #accordionSidebar .collapse-item:hover,
-        #accordionSidebar .collapse-item.active {
+        #accordionSidebar .collapse-item:hover {
             color: #f1b935 !important;
             background-color: rgba(241, 185, 53, 0.15) !important;
-            font-weight: bold !important;
         }
 
-        /* 6. VERİLER & YÖNETİM SAYFASI OLDUĞU İÇİN KIRMIZI TEMA */
+        /* Kırmızı Tema (Veriler & Yönetim Kategorisi) */
         .brand-text-red {
             color: #e74a3b !important;
             font-weight: 900 !important;
@@ -94,22 +79,21 @@
             border-left: 4px solid #e74a3b !important;
         }
 
-        /* Kart Kenar Çizgileri */
+        /* Sayaç Kartı Kenar Çizgileri */
         .border-left-brick-red { border-left: .25rem solid #e74a3b !important; }
         .border-left-brick-blue { border-left: .25rem solid #4e88ff !important; }
         .border-left-brick-green { border-left: .25rem solid #2ecc71 !important; }
         .border-left-brick-yellow { border-left: .25rem solid #f1b935 !important; }
 
         .text-brick-red { color: #e74a3b !important; }
-        .bg-brick-red { background-color: #e74a3b !important; color: #fff !important; }
 
-        /* Grafik Alanı Boyutları */
-        .chart-box {
+        /* Grafik Konteyner Sabitleri */
+        .chart-area-box {
             position: relative;
             height: 320px;
             width: 100%;
         }
-        .chart-box-pie {
+        .chart-pie-box {
             position: relative;
             height: 260px;
             width: 100%;
@@ -171,16 +155,16 @@
             <!-- 3. KOLEKSİYON & BİRİMLER (SARI) -->
             <div class="sidebar-heading h-yellow">KOLEKSİYON & BİRİMLER</div>
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProducts">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProducts" aria-expanded="false">
                     <i class="fas fa-fw fa-boxes i-yellow"></i>
                     <span>Ürünlerimiz</span>
                 </a>
-                <div id="collapseProducts" class="collapse" data-parent="#accordionSidebar">
+                <div id="collapseProducts" class="collapse" data-parent="#accordionSidebar" style="height: auto !important;">
                     <div class="py-2 collapse-inner rounded">
-                        <h6 class="collapse-header text-warning font-weight-bold">Set Çeşitleri:</h6>
-                        <a class="collapse-item" href="product-details.html">Koleksiyonluk Setler</a>
-                        <a class="collapse-item" href="product-details.html">MOC Özel Tasarımlar</a>
-                        <a class="collapse-item" href="product-details.html">Yedek Parçalar</a>
+                        <h6 class="collapse-header text-warning font-weight-bold">SET MODELLERİ:</h6>
+                        <a class="collapse-item" href="product-details.html">Ferrari Daytona SP3</a>
+                        <a class="collapse-item" href="product-castle.html">MOC Orta Çağ Kalesi</a>
+                        <a class="collapse-item" href="product-falcon.html">UCS Millennium Falcon</a>
                     </div>
                 </div>
             </li>
@@ -199,8 +183,7 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="missing-part.html">
-                    <i class="fas fa-fw puzzle-piece i-yellow"></i>
-                    <i class="fas fa-puzzle-piece i-yellow"></i>
+                    <i class="fas fa-fw fa-puzzle-piece i-yellow"></i>
                     <span>Eksik Parça Masası</span>
                 </a>
             </li>
@@ -209,7 +192,7 @@
 
             <!-- 4. VERİLER & YÖNETİM (KIRMIZI) -->
             <div class="sidebar-heading h-red">VERİLER & YÖNETİM</div>
-            <!-- Aktif Sekme: Rakamlarla BrickMaster -->
+            <!-- Aktif Sekme -->
             <li class="nav-item active-red">
                 <a class="nav-link" href="charts.html">
                     <i class="fas fa-fw fa-chart-pie i-red"></i>
@@ -249,7 +232,7 @@
                     </button>
 
                     <h5 class="m-0 font-weight-bold text-gray-800 d-none d-sm-inline-block">
-                        <i class="fas fa-chart-bar text-brick-red mr-2"></i>BrickMaster İstatistik ve Analiz Merkezi
+                        <i class="fas fa-chart-bar text-brick-red mr-2"></i>BrickMaster İstatistik ve Analiz Portalı
                     </h5>
 
                     <ul class="navbar-nav ml-auto">
@@ -342,7 +325,7 @@
                     <!-- 2. KISIM: ÇİZGİ GRAFİĞİ & DONUT GRAFİĞİ -->
                     <div class="row">
 
-                        <!-- Çizgi Grafiği: Kılavuz İndirmeleri -->
+                        <!-- Çizgi Grafiği: Aylık Kılavuz İndirmeleri -->
                         <div class="col-xl-8 col-lg-7">
                             <div class="card shadow-sm mb-4">
                                 <div class="card-header py-3 d-flex align-items-center justify-content-between bg-white">
@@ -352,7 +335,7 @@
                                     <span class="badge badge-danger">Yıllık Dağılım</span>
                                 </div>
                                 <div class="card-body">
-                                    <div class="chart-box">
+                                    <div class="chart-area-box">
                                         <canvas id="canvasLineChart"></canvas>
                                     </div>
                                     <hr>
@@ -363,7 +346,7 @@
                             </div>
                         </div>
 
-                        <!-- Donut / Pasta Grafiği: Temalara Göre Set Dağılımı -->
+                        <!-- Donut / Pasta Grafiği: Temalara Göre Dağılım -->
                         <div class="col-xl-4 col-lg-5">
                             <div class="card shadow-sm mb-4">
                                 <div class="card-header py-3 d-flex align-items-center justify-content-between bg-white">
@@ -373,7 +356,7 @@
                                     <span class="badge badge-secondary">Envanter Oranı</span>
                                 </div>
                                 <div class="card-body">
-                                    <div class="chart-box-pie">
+                                    <div class="chart-pie-box">
                                         <canvas id="canvasPieChart"></canvas>
                                     </div>
                                     <div class="mt-3 text-center small text-gray-600">
@@ -398,7 +381,7 @@
                                     </h6>
                                 </div>
                                 <div class="card-body">
-                                    <div class="chart-box">
+                                    <div class="chart-area-box">
                                         <canvas id="canvasBarChart"></canvas>
                                     </div>
                                     <hr>
@@ -437,18 +420,18 @@
     <!-- Chart.js Kütüphanesi -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
 
-    <!-- Grafik JS Kodları -->
+    <!-- Doğrudan Çalışan Grafik Çizim Scriptleri -->
     <script>
         window.addEventListener('load', function () {
             if (typeof Chart === 'undefined') {
-                console.error("Chart.js yüklenemedi!");
+                console.error("Chart.js kütüphanesi yüklenemedi!");
                 return;
             }
 
             Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
             Chart.defaults.global.defaultFontColor = '#858796';
 
-            // 1. Çizgi Grafiği
+            // 1. Çizgi Grafiği: Aylık Kılavuz İndirmeleri
             var ctxLine = document.getElementById('canvasLineChart');
             if (ctxLine) {
                 new Chart(ctxLine.getContext('2d'), {
@@ -482,7 +465,7 @@
                 });
             }
 
-            // 2. Donut / Pasta Grafiği
+            // 2. Donut / Pasta Grafiği: Temalara Göre Set Dağılımı
             var ctxPie = document.getElementById('canvasPieChart');
             if (ctxPie) {
                 new Chart(ctxPie.getContext('2d'), {
@@ -504,28 +487,34 @@
                 });
             }
 
-            // 3. Çubuk Grafiği
+            // 3. Çubuk Grafiği: Parça Sayısına Göre Montaj Süreleri
             var ctxBar = document.getElementById('canvasBarChart');
             if (ctxBar) {
                 new Chart(ctxBar.getContext('2d'), {
                     type: 'bar',
                     data: {
-                        labels: ["0 - 500 Parça", "501 - 1500 Parça", "1501 - 2500 Parça", "2501 - 3500 Parça", "3500+ Parça (UCS)"],
+                        labels: ["500 - 1000 Parça", "1001 - 2000 Parça", "2001 - 3500 Parça", "3500+ Parça (UCS & Technic)"],
                         datasets: [{
                             label: "Ortalama Montaj Süresi (Saat)",
                             backgroundColor: "#e74a3b",
                             hoverBackgroundColor: "#c0392b",
                             borderColor: "#e74a3b",
-                            data: [2, 5.5, 11, 18.5, 28]
+                            maxBarThickness: 45,
+                            data: [3.5, 7.0, 14.5, 26.0]
                         }]
                     },
                     options: {
                         maintainAspectRatio: false,
                         layout: { padding: { left: 10, right: 25, top: 20, bottom: 0 } },
                         scales: {
-                            xAxes: [{ gridLines: { display: false, drawBorder: false }, maxBarThickness: 45 }],
+                            xAxes: [{ gridLines: { display: false, drawBorder: false } }],
                             yAxes: [{
-                                ticks: { min: 0, max: 35, maxTicksLimit: 7, padding: 10 },
+                                ticks: {
+                                    beginAtZero: true,
+                                    maxTicksLimit: 6,
+                                    padding: 10,
+                                    callback: function(value) { return value + ' Saat'; }
+                                },
                                 gridLines: { color: "rgb(234, 236, 244)", zeroLineColor: "rgb(234, 236, 244)", drawBorder: false, borderDash: [2] }
                             }]
                         },
