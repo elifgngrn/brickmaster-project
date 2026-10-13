@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="BrickMaster Studio & Store - Duyuru ve Bülten Arşivi">
+    <meta name="author" content="KOÜ Bilişim Sistemleri Mühendisliği">
+
+    <title>BrickMaster - Duyuru Arşivi</title>
+
+    <!-- FontAwesome & Google Fonts -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900" rel="stylesheet">
+
+    <!-- SB Admin 2 Orijinal CSS -->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+    <style>
+        /* 1. SABİT ANTRASİT MENÜ BARI */
+        #accordionSidebar {
+            background-color: #2f323e !important;
+            background-image: none !important;
+        }
+
+        /* 2. KATEGORİ BAŞLIKLARI (SB-ADMIN MAVİSİNİ KESİN EZEN RENKLER) */
+        #accordionSidebar .sidebar-heading.h-blue { color: #4e88ff !important; font-weight: 800 !important; font-size: 0.72rem !important; letter-spacing: 0.8px; }
+        #accordionSidebar .sidebar-heading.h-green { color: #2ecc71 !important; font-weight: 800 !important; font-size: 0.72rem !important; letter-spacing: 0.8px; }
+        #accordionSidebar .sidebar-heading.h-yellow { color: #f1b935 !important; font-weight: 800 !important; font-size: 0.72rem !important; letter-spacing: 0.8px; }
+        #accordionSidebar .sidebar-heading.h-red { color: #e74a3b !important; font-weight: 800 !important; font-size: 0.72rem !important; letter-spacing: 0.8px; }
+
+        /* 3. KATEGORİ İKONLARI */
+        #accordionSidebar .i-blue { color: #4e88ff !important; }
+        #accordionSidebar .i-green { color: #2ecc71 !important; }
+        #accordionSidebar .i-yellow { color: #f1b935 !important; }
+        #accordionSidebar .i-red { color: #e74a3b !important; }
+
+        /* 4. MENÜ LİNKLERİ */
+        #accordionSidebar .nav-item .nav-link {
+            color: #d1d5db !important;
+            font-size: 0.92rem;
+            padding: 0.75rem 1rem;
+        }
+        #accordionSidebar .nav-item .nav-link:hover {
+            color: #ffffff !important;
+            background-color: rgba(255, 255, 255, 0.05) !important;
+        }
+
+        /* 5. AÇILIR MENÜ (COLLAPSE) İÇLİK */
+        #accordionSidebar .collapse-inner {
+            background-color: #242631 !important;
+            border: 1px solid #3c4052 !important;
+        }
+        #accordionSidebar .collapse-item {
+            color: #d1d5db !important;
+            font-size: 0.85rem !important;
+        }
+        #accordionSidebar .collapse-item:hover {
+            color: #f1b935 !important;
+            background-color: rgba(241, 185, 53, 0.1) !important;
+        }
+
+        /* ==============================================================
+           BU SAYFA "VERİLER & YÖNETİM" KATEGORİSİ OLDUĞU İÇİN (KIRMIZI TEMA):
+           ============================================================== */
+        .brand-text-red {
+            color: #e74a3b !important;
+            font-weight: 900 !important;
+            letter-spacing: 1.5px;
+            font-size: 1.15rem;
+        }
+        .brand-icon-red {
+            color: #e74a3b !important;
+        }
+        #accordionSidebar .nav-item.active-red .nav-link {
+            color: #ffffff !important;
+            font-weight: bold !important;
+            background-color: rgba(231, 74, 59, 0.18) !important;
+            border-left: 4px solid #e74a3b !important;
+        }
+
+        /* Sayfa İçi Vurgular */
+        .text-brick-red { color: #e74a3b !important; }
+        .bg-brick-red { background-color: #e74a3b !important; color: #fff !important; }
+        .border-left-brick-red { border-left: .25rem solid #e74a3b !important; }
+        .border-left-brick-blue { border-left: .25rem solid #4e88ff !important; }
+        .border-left-brick-green { border-left: .25rem solid #2ecc71 !important; }
+        .border-left-brick-yellow { border-left: .25rem solid #f1b935 !important; }
+
+        /* Duyuru Kartı Hover Efekti */
+        .announcement-card {
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+        }
+        .announcement-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
+        }
+    </style>
+</head>
+
+<body id="page-top">
+
+    <div id="wrapper">
+
+        <!-- SIDEBAR -->
+        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Logo (Kırmızı Tema) -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center my-2" href="index.html">
+                <div class="sidebar-brand-icon rotate-n-15 mr-2">
+                    <i class="fas fa-cubes fa-2x brand-icon-red"></i>
+                </div>
+                <div class="sidebar-brand-text brand-text-red">BRICKMASTER</div>
+            </a>
+
+            <hr class="sidebar-divider my-1 border-secondary">
+
+            <!-- 1. VİTRİN & GİRİŞ (MAVİ) -->
+            <div class="sidebar-heading h-blue mt-3">VİTRİN & GİRİŞ</div>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-home i-blue"></i>
+                    <span>Ana Sayfa</span>
+                </a>
+            </li>
+
+            <hr class="sidebar-divider my-2 border-secondary">
+
+            <!-- 2. KURUMSAL (YEŞİL) -->
+            <div class="sidebar-heading h-green">KURUMSAL</div>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">
+                    <i class="fas fa-fw fa-info-circle i-green"></i>
+                    <span>Hakkımızda</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="mission.html">
+                    <i class="fas fa-fw fa-bullseye i-green"></i>
+                    <span>Misyon & Vizyon</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">
+                    <i class="fas fa-fw fa-envelope i-green"></i>
+                    <span>İletişim & Harita</span>
+                </a>
+            </li>
+
+            <hr class="sidebar-divider my-2 border-secondary">
+
+            <!-- 3. KOLEKSİYON & BİRİMLER (SARI) -->
+            <div class="sidebar-heading h-yellow">KOLEKSİYON & BİRİMLER</div>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProducts">
+                    <i class="fas fa-fw fa-boxes i-yellow"></i>
+                    <span>Ürünlerimiz</span>
+                </a>
+                <div id="collapseProducts" class="collapse" data-parent="#accordionSidebar">
+                    <div class="py-2 collapse-inner rounded">
+                        <h6 class="collapse-header text-warning font-weight-bold">Set Çeşitleri:</h6>
+                        <a class="collapse-item" href="product-details.html">Koleksiyonluk Setler</a>
+                        <a class="collapse-item" href="product-details.html">MOC Özel Tasarımlar</a>
+                        <a class="collapse-item" href="product-details.html">Yedek Parçalar</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUnits">
+                    <i class="fas fa-fw fa-sitemap i-yellow"></i>
+                    <span>Birimlerimiz</span>
+                </a>
+                <div id="collapseUnits" class="collapse" data-parent="#accordionSidebar">
+                    <div class="py-2 collapse-inner rounded">
+                        <h6 class="collapse-header text-warning font-weight-bold">Birim Masaları:</h6>
+                        <a class="collapse-item" href="#">Kılavuz Arşivi</a>
+                        <a class="collapse-item" href="#">Lojistik & Ayıklama</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="missing-part.html">
+                    <i class="fas fa-fw fa-puzzle-piece i-yellow"></i>
+                    <span>Eksik Parça Masası</span>
+                </a>
+            </li>
+
+            <hr class="sidebar-divider my-2 border-secondary">
+
+            <!-- 4. VERİLER & YÖNETİM (KIRMIZI) -->
+            <div class="sidebar-heading h-red">VERİLER & YÖNETİM</div>
+            <li class="nav-item">
+                <a class="nav-link" href="charts.html">
+                    <i class="fas fa-fw fa-chart-pie i-red"></i>
+                    <span>Rakamlarla BrickMaster</span>
+                </a>
+            </li>
+            <!-- AKTİF SEKME: DUYURU ARŞİVİ -->
+            <li class="nav-item active-red">
+                <a class="nav-link" href="announcements.html">
+                    <i class="fas fa-fw fa-bullhorn i-red"></i>
+                    <span>Duyuru Arşivi</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="admin.html">
+                    <i class="fas fa-fw fa-user-shield i-red"></i>
+                    <span>Yönetim Paneli</span>
+                </a>
+            </li>
+
+            <hr class="sidebar-divider d-none d-md-block my-3 border-secondary">
+
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+        </ul>
+        <!-- SIDEBAR BİTİŞ -->
+
+        <!-- İÇERİK ALANI -->
+        <div id="content-wrapper" class="d-flex flex-column bg-light">
+
+            <div id="content">
+
+                <!-- TOPBAR -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow-sm">
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3 text-danger">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <h5 class="m-0 font-weight-bold text-gray-800 d-none d-sm-inline-block">
+                        <i class="fas fa-bullhorn text-brick-red mr-2"></i>BrickMaster Bülten ve Duyuru Merkezi
+                    </h5>
+
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <span class="text-gray-600 small font-weight-bold">
+                                KOÜ Bilişim Sistemleri Müh. | TBL303
+                            </span>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- SAYFA İÇERİĞİ -->
+                <div class="container-fluid">
+
+                    <!-- Başlık & Vitrin Butonu -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <div>
+                            <h1 class="h3 mb-0 text-gray-800 font-weight-bold">Duyuru ve Bülten Arşivi</h1>
+                            <p class="text-muted small mb-0">Atölye lansmanları, kampanyalar, kılavuz güncellemeleri ve lojistik duyuruları (En yeniden en eskiye).</p>
+                        </div>
+                        <a href="index.html" class="btn btn-sm btn-danger shadow-sm font-weight-bold">
+                            <i class="fas fa-arrow-left fa-sm mr-1"></i> Vitrine Geri Dön
+                        </a>
+                    </div>
+
+                    <!-- FİLTRELEME BUTONLARI (KATEGORİLER) -->
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-body py-2 d-flex flex-wrap align-items-center justify-content-between">
+                            <div class="my-1">
+                                <span class="small font-weight-bold text-gray-700 mr-2"><i class="fas fa-filter text-danger mr-1"></i>Kategoriye Göre Süz:</span>
+                                <button class="btn btn-sm btn-danger font-weight-bold filter-btn active mr-1" data-filter="all">Tümü (6)</button>
+                                <button class="btn btn-sm btn-outline-primary font-weight-bold filter-btn mr-1" data-filter="set">Yeni Set</button>
+                                <button class="btn btn-sm btn-outline-danger font-weight-bold filter-btn mr-1" data-filter="kampanya">Kampanya</button>
+                                <button class="btn btn-sm btn-outline-success font-weight-bold filter-btn mr-1" data-filter="stok">Stok & Parça</button>
+                                <button class="btn btn-sm btn-outline-warning text-dark font-weight-bold filter-btn mr-1" data-filter="etkinlik">Etkinlik</button>
+                                <button class="btn btn-sm btn-outline-info font-weight-bold filter-btn" data-filter="lojistik">Lojistik</button>
+                            </div>
+                            <span class="small text-muted my-1"><i class="fas fa-info-circle mr-1"></i>Duyuruya tıklayarak detay ve dosya ekine ulaşabilirsiniz.</span>
+                        </div>
+                    </div>
+
+                    <!-- DUYURULAR LİSTESİ (EN YENİDEN EN ESKİYE) -->
+                    <div class="row" id="announcementsContainer">
+
+                        <!-- Duyuru 1 (14 Ekim 2026 - Yeni Set) -->
+                        <div class="col-12 mb-3 announcement-item" data-category="set">
+                            <div class="card border-left-brick-blue shadow-sm announcement-card" data-toggle="modal" data-target="#modalArchive1">
+                                <div class="card-body py-3">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <span class="badge badge-primary px-2 py-1"><i class="fas fa-boxes mr-1"></i>Yeni Set Lansmanı</span>
+                                        <span class="badge badge-light border text-muted"><i class="far fa-calendar-alt mr-1"></i>14 Ekim 2026</span>
+                                    </div>
+                                    <h5 class="font-weight-bold text-gray-800 mb-1">2026 Technic Serisi Orijinal Montaj Kılavuzları Eklendi</h5>
+                                    <p class="text-gray-600 small mb-2">
+                                        Tüm 1:8 süper spor araçların torba bazlı yapım kitapçıkları vektörel PDF olarak arşive yüklendi. Adım adım montaj şeması ve dişli oranları ekli belgede incelenebilir.
+                                    </p>
+                                    <div class="d-flex align-items-center small text-primary font-weight-bold">
+                                        <i class="fas fa-paperclip mr-1"></i>Dosya Eki: Technic_Kilavuz_2026.pdf (3.2 MB) &middot; <span class="text-dark ml-2">Detayları Gör &rarr;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Duyuru 2 (10 Ekim 2026 - Kampanya) -->
+                        <div class="col-12 mb-3 announcement-item" data-category="kampanya">
+                            <div class="card border-left-brick-red shadow-sm announcement-card" data-toggle="modal" data-target="#modalArchive2">
+                                <div class="card-body py-3">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <span class="badge badge-danger px-2 py-1"><i class="fas fa-tags mr-1"></i>Özel Kampanya</span>
+                                        <span class="badge badge-light border text-muted"><i class="far fa-calendar-alt mr-1"></i>10 Ekim 2026</span>
+                                    </div>
+                                    <h5 class="font-weight-bold text-gray-800 mb-1">Bahar Dönemi UCS ve MOC Modellerinde %20 İndirim Fırsatı</h5>
+                                    <p class="text-gray-600 small mb-2">
+                                        Stoklarla sınırlı "BRICK20" kupon kodları aktif edildi. İndirim kapsamındaki koleksiyonluk setler ve kampanya şartname tablosu ekte sunulmuştur.
+                                    </p>
+                                    <div class="d-flex align-items-center small text-danger font-weight-bold">
+                                        <i class="fas fa-paperclip mr-1"></i>Dosya Eki: Indirim_Listesi.docx (850 KB) &middot; <span class="text-dark ml-2">Detayları Gör &rarr;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Duyuru 3 (04 Ekim 2026 - Stok & Parça) -->
+                        <div class="col-12 mb-3 announcement-item" data-category="stok">
+                            <div class="card border-left-brick-green shadow-sm announcement-card" data-toggle="modal" data-target="#modalArchive3">
+                                <div class="card-body py-3">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <span class="badge badge-success px-2 py-1"><i class="fas fa-cubes mr-1"></i>Stok & Parça Girişi</span>
+                                        <span class="badge badge-light border text-muted"><i class="far fa-calendar-alt mr-1"></i>04 Ekim 2026</span>
+                                    </div>
+                                    <h5 class="font-weight-bold text-gray-800 mb-1">Kayıp Parça Masası: Vintage Tuğla Paketleri Ayıklandı ve Listelendi</h5>
+                                    <p class="text-gray-600 small mb-2">
+                                        90'lı yılların Space, Castle ve Pirates temalı 5.000 adet orijinal tuğlası sterilize edilip kataloglandı. Eksik parçası olan koleksiyonerler talep formundan erişebilir.
+                                    </p>
+                                    <div class="d-flex align-items-center small text-success font-weight-bold">
+                                        <i class="fas fa-paperclip mr-1"></i>Dosya Eki: Vintage_Parca_Fotograflari.jpg (4.1 MB) &middot; <span class="text-dark ml-2">Detayları Gör &rarr;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Duyuru 4 (28 Eylül 2026 - Etkinlik) -->
+                        <div class="col-12 mb-3 announcement-item" data-category="etkinlik">
+                            <div class="card border-left-brick-yellow shadow-sm announcement-card" data-toggle="modal" data-target="#modalArchive4">
+                                <div class="card-body py-3">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <span class="badge badge-warning text-dark px-2 py-1"><i class="fas fa-trophy mr-1"></i>Tasarım Etkinliği</span>
+                                        <span class="badge badge-light border text-muted"><i class="far fa-calendar-alt mr-1"></i>28 Eylül 2026</span>
+                                    </div>
+                                    <h5 class="font-weight-bold text-gray-800 mb-1">KOÜ Umuttepe Yerleşkesi Öğrenci MOC Tasarım Yarışması Başladı</h5>
+                                    <p class="text-gray-600 small mb-2">
+                                        Mühendislik ve tasarım öğrencilerinin özgün tuğla modellerini yarıştıracağı etkinlik takvimi açıklandı. Dereceye giren tasarımlar stüdyomuz tarafından kutulanacaktır.
+                                    </p>
+                                    <div class="d-flex align-items-center small text-warning font-weight-bold">
+                                        <i class="fas fa-paperclip mr-1"></i>Dosya Eki: Yarisma_Sartnamesi.pdf (1.1 MB) &middot; <span class="text-dark ml-2">Detayları Gör &rarr;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Duyuru 5 (20 Eylül 2026 - Lojistik) -->
+                        <div class="col-12 mb-3 announcement-item" data-category="lojistik">
+                            <div class="card border-left-brick-blue shadow-sm announcement-card" data-toggle="modal" data-target="#modalArchive5">
+                                <div class="card-body py-3">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <span class="badge badge-info px-2 py-1"><i class="fas fa-shipping-fast mr-1"></i>Lojistik Ağı</span>
+                                        <span class="badge badge-light border text-muted"><i class="far fa-calendar-alt mr-1"></i>20 Eylül 2026</span>
+                                    </div>
+                                    <h5 class="font-weight-bold text-gray-800 mb-1">Kocaeli İçi Aynı Gün Adrese Teslim Kurye Sistemi Devreye Alındı</h5>
+                                    <p class="text-gray-600 small mb-2">
+                                        İzmit, Gebze, Başiskele ve Körfez bölgelerinde verilen set ve yedek parça siparişleri saat 14:00'e kadar aynı gün kapıya teslim edilecektir.
+                                    </p>
+                                    <div class="d-flex align-items-center small text-info font-weight-bold">
+                                        <i class="fas fa-paperclip mr-1"></i>Dosya Eki: Dagitim_Haritasi.pdf (1.8 MB) &middot; <span class="text-dark ml-2">Detayları Gör &rarr;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Duyuru 6 (12 Ağustos 2026 - Yeni Set) -->
+                        <div class="col-12 mb-3 announcement-item" data-category="set">
+                            <div class="card border-left-brick-blue shadow-sm announcement-card" data-toggle="modal" data-target="#modalArchive6">
+                                <div class="card-body py-3">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <span class="badge badge-primary px-2 py-1"><i class="fas fa-boxes mr-1"></i>Klasik & Arşiv</span>
+                                        <span class="badge badge-light border text-muted"><i class="far fa-calendar-alt mr-1"></i>12 Ağustos 2026</span>
+                                    </div>
+                                    <h5 class="font-weight-bold text-gray-800 mb-1">Orta Çağ Gözetleme Kalesi MOC Seti Stoklarda Yerini Aldı</h5>
+                                    <p class="text-gray-600 small mb-2">
+                                        5.120 parçadan oluşan, tamamen numaralandırılmış torbalarla paketlenen el yapımı kale seti ön siparişe açıldı. Model boyutları ve parça kataloğu ektedir.
+                                    </p>
+                                    <div class="d-flex align-items-center small text-primary font-weight-bold">
+                                        <i class="fas fa-paperclip mr-1"></i>Dosya Eki: Kale_Model_Katalogu.pdf (5.4 MB) &middot; <span class="text-dark ml-2">Detayları Gör &rarr;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ==========================================
+                 MODAL PENCERELERİ (DERSİN 4. İSTERİ)
+                 ========================================== -->
+
+            <!-- Modal 1 -->
+            <div class="modal fade" id="modalArchive1" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header bg-primary text-white">
+                            <h5 class="modal-title font-weight-bold"><i class="fas fa-file-pdf mr-2"></i>Technic Montaj Kılavuzları (PDF)</h5>
+                            <button type="button" class="close text-white" data-dismiss="modal"><span>&times;</span></button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="text-gray-700">Tüm 1:8 Technic hiper araç modellerinin yüksek çözünürlüklü dijital montaj kitapçıkları sisteme yüklenmiştir. Mobil cihazınızdan veya tabletinizden sayfaları yakınlaştırarak yapım aşamalarını takip edebilirsiniz.</p>
+                            <div class="p-3 bg-light rounded border mt-3">
+                                <h6 class="font-weight-bold text-primary mb-1"><i class="fas fa-paperclip mr-1"></i>Duyuru Dosya Eki:</h6>
+                                <a href="#" class="btn btn-sm btn-primary font-weight-bold" onclick="alert('Technic_Kilavuz_2026.pdf indiriliyor...'); return false;">
+                                    <i class="fas fa-download mr-1"></i> Technic_Kilavuz_2026.pdf İndir (3.2 MB)
+                                </a>
+                            </div>
+                        </div>
+                        <div class="modal-footer"><button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Kapat</button></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal 2 -->
+            <div class="modal fade" id="modalArchive2" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header bg-danger text-white">
+                            <h5 class="modal-title font-weight-bold"><i class="fas fa-tags mr-2"></i>Bahar Kampanyası Şartnamesi</h5>
+                            <button type="button" class="close text-white" data-dismiss="modal"><span>&times;</span></button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="text-gray-700">BRICK20 kupon kodu ile Technic ve UCS serisi seçili ürünlerde sepette net %20 indirim uygulanacaktır. Kampanya stoklarla sınırlı olup her kullanıcı maksimum 2 kutu satın alabilir.</p>
+                            <div class="p-3 bg-light rounded border mt-3">
+                                <h6 class="font-weight-bold text-danger mb-1"><i class="fas fa-paperclip mr-1"></i>Duyuru Dosya Eki:</h6>
+                                <a href="#" class="btn btn-sm btn-danger font-weight-bold" onclick="alert('Indirim_Listesi.docx indiriliyor...'); return false;">
+                                    <i class="fas fa-download mr-1"></i> Indirim_Listesi.docx İndir (850 KB)
+                                </a>
+                            </div>
+                        </div>
+                        <div class="modal-footer"><button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Kapat</button></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal 3 -->
+            <div class="modal fade" id="modalArchive3" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header bg-success text-white">
+                            <h5 class="modal-title font-weight-bold"><i class="fas fa-cubes mr-2"></i>Vintage Tuğla Envanteri</h5>
+                            <button type="button" class="close text-white" data-dismiss="modal"><span>&times;</span></button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="text-gray-700">90'lı yılların Space, Castle ve Pirates temalarına ait gri, siyah ve sarı renkteki orijinal parçalar ayıklanmıştır. Parçaların tamamı hasarsız, orijinal ve kullanıma hazırdır.</p>
+                            <div class="p-3 bg-light rounded border mt-3">
+                                <h6 class="font-weight-bold text-success mb-1"><i class="fas fa-paperclip mr-1"></i>Duyuru Dosya Eki:</h6>
+                                <a href="#" class="btn btn-sm btn-success font-weight-bold" onclick="alert('Vintage_Parca_Fotograflari.jpg indiriliyor...'); return false;">
+                                    <i class="fas fa-download mr-1"></i> Vintage_Parca_Fotograflari.jpg İndir (4.1 MB)
+                                </a>
+                            </div>
+                        </div>
+                        <div class="modal-footer"><button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Kapat</button></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal 4 -->
+            <div class="modal fade" id="modalArchive4" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header bg-warning text-dark">
+                            <h5 class="modal-title font-weight-bold"><i class="fas fa-trophy mr-2"></i>MOC Yarışması Şartnamesi</h5>
+                            <button type="button" class="close text-dark" data-dismiss="modal"><span>&times;</span></button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="text-gray-700">Kocaeli Üniversitesi Bilişim Sistemleri Mühendisliği öğrencileri ve meraklıları için düzenlenen tasarım maratonunda en iyi 3 proje ödüllendirilecektir. Başvuru koşulları ve puanlama kriterleri ekli dosyada yer almaktadır.</p>
+                            <div class="p-3 bg-light rounded border mt-3">
+                                <h6 class="font-weight-bold text-dark mb-1"><i class="fas fa-paperclip mr-1"></i>Duyuru Dosya Eki:</h6>
+                                <a href="#" class="btn btn-sm btn-warning text-dark font-weight-bold" onclick="alert('Yarisma_Sartnamesi.pdf indiriliyor...'); return false;">
+                                    <i class="fas fa-download mr-1"></i> Yarisma_Sartnamesi.pdf İndir (1.1 MB)
+                                </a>
+                            </div>
+                        </div>
+                        <div class="modal-footer"><button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Kapat</button></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal 5 -->
+            <div class="modal fade" id="modalArchive5" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header bg-info text-white">
+                            <h5 class="modal-title font-weight-bold"><i class="fas fa-shipping-fast mr-2"></i>Aynı Gün Kurye Güzergahları</h5>
+                            <button type="button" class="close text-white" data-dismiss="modal"><span>&times;</span></button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="text-gray-700">Kocaeli ili içi özel kurye hizmetimiz devreye alınmıştır. Hafta içi her gün saat 14:00'e kadar oluşturulan siparişler aynı gün saat 19:00'a kadar adresinize elden teslim edilmektedir.</p>
+                            <div class="p-3 bg-light rounded border mt-3">
+                                <h6 class="font-weight-bold text-info mb-1"><i class="fas fa-paperclip mr-1"></i>Duyuru Dosya Eki:</h6>
+                                <a href="#" class="btn btn-sm btn-info font-weight-bold" onclick="alert('Dagitim_Haritasi.pdf indiriliyor...'); return false;">
+                                    <i class="fas fa-download mr-1"></i> Dagitim_Haritasi.pdf İndir (1.8 MB)
+                                </a>
+                            </div>
+                        </div>
+                        <div class="modal-footer"><button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Kapat</button></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal 6 -->
+            <div class="modal fade" id="modalArchive6" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header bg-primary text-white">
+                            <h5 class="modal-title font-weight-bold"><i class="fas fa-chess-rook mr-2"></i>Orta Çağ Kalesi MOC Kataloğu</h5>
+                            <button type="button" class="close text-white" data-dismiss="modal"><span>&times;</span></button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="text-gray-700">Atölyemizin özel tasarımı olan Orta Çağ Gözetleme Kalesi, 5.120 parça ve 12 adet nadir minifigür içermektedir. Açılır kapanır kapı mekanizması ve modüler kat planı hakkında detaylı teknik bilgi katalogda mevcuttur.</p>
+                            <div class="p-3 bg-light rounded border mt-3">
+                                <h6 class="font-weight-bold text-primary mb-1"><i class="fas fa-paperclip mr-1"></i>Duyuru Dosya Eki:</h6>
+                                <a href="#" class="btn btn-sm btn-primary font-weight-bold" onclick="alert('Kale_Model_Katalogu.pdf indiriliyor...'); return false;">
+                                    <i class="fas fa-download mr-1"></i> Kale_Model_Katalogu.pdf İndir (5.4 MB)
+                                </a>
+                            </div>
+                        </div>
+                        <div class="modal-footer"><button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Kapat</button></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white shadow-sm mt-4">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span class="text-gray-700 font-weight-bold">
+                            BrickMaster Studio & Store &copy; 2026 | Kocaeli Üniversitesi Bilişim Sistemleri Mühendisliği TBL303
+                        </span>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+    <!-- JS Kütüphaneleri -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Kategori Filtreleme Betiği -->
+    <script>
+        $(document).ready(function() {
+            $('.filter-btn').on('click', function() {
+                var filterValue = $(this).attr('data-filter');
+                
+                $('.filter-btn').removeClass('active btn-danger').addClass('btn-outline-secondary');
+                $(this).addClass('active btn-danger').removeClass('btn-outline-secondary');
+
+                if (filterValue === 'all') {
+                    $('.announcement-item').fadeIn(200);
+                } else {
+                    $('.announcement-item').each(function() {
+                        if ($(this).attr('data-category') === filterValue) {
+                            $(this).fadeIn(200);
+                        } else {
+                            $(this).fadeOut(200);
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
